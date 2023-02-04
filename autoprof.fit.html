@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>autoprof.fit package &mdash; AutoProf 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autoprof.image package" href="autoprof.image.html" />
+    <link rel="prev" title="autoprof package" href="autoprof.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> AutoProf
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citing AutoProf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">autoprof</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="autoprof.html">autoprof package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="autoprof.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">autoprof.fit package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html">autoprof.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html">autoprof.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.parse_config.html">autoprof.parse_config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.plots.html">autoprof.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.html">autoprof.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#module-autoprof.AP_config">autoprof.AP_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#module-autoprof">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AutoProf</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">autoprof</a> &raquo;</li>
+        
+          <li><a href="autoprof.html">autoprof package</a> &raquo;</li>
+        
+      <li>autoprof.fit package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/autoprof.fit.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="autoprof-fit-package">
+<h1>autoprof.fit package<a class="headerlink" href="#autoprof-fit-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-autoprof.fit.base">
+<span id="autoprof-fit-base-module"></span><h2>autoprof.fit.base module<a class="headerlink" href="#module-autoprof.fit.base" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.fit.base.BaseOptimizer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.fit.base.</span></span><span class="sig-name descname"><span class="pre">BaseOptimizer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_tolerance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.base.BaseOptimizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base optimizer object that other optimizers inherit from. Ensures consistent signature for the classes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – an AutoProf_Model object that will have it’s (unlocked) parameters optimized [AutoProf_Model]</p></li>
+<li><p><strong>initial_state</strong> – optional initialization for the parameters as a 1D tensor [tensor]</p></li>
+<li><p><strong>max_iter</strong> – maximum allowed number of iterations [int]</p></li>
+<li><p><strong>relative_tolerance</strong> – tolerance for counting success steps as: 0 &lt; (Chi2^2 - Chi1^2)/Chi1^2 &lt; tol [float]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.base.BaseOptimizer.chi2contour">
+<span class="sig-name descname"><span class="pre">chi2contour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">confidence</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.682689492137</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.base.BaseOptimizer.chi2contour" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.base.BaseOptimizer.chi2min">
+<span class="sig-name descname"><span class="pre">chi2min</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.base.BaseOptimizer.chi2min" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.base.BaseOptimizer.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.base.BaseOptimizer.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.base.BaseOptimizer.res">
+<span class="sig-name descname"><span class="pre">res</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.base.BaseOptimizer.res" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.base.BaseOptimizer.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.base.BaseOptimizer.step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.fit.gp">
+<span id="autoprof-fit-gp-module"></span><h2>autoprof.fit.gp module<a class="headerlink" href="#module-autoprof.fit.gp" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-autoprof.fit.gradient">
+<span id="autoprof-fit-gradient-module"></span><h2>autoprof.fit.gradient module<a class="headerlink" href="#module-autoprof.fit.gradient" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.fit.gradient.Grad">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.fit.gradient.</span></span><span class="sig-name descname"><span class="pre">Grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.gradient.Grad" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.fit.base.BaseOptimizer" title="autoprof.fit.base.BaseOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOptimizer</span></code></a></p>
+<p>Basic wrapper just to make it easier to use the built in pytorch
+gradient descent optimizers on AutoProf_Model objects. Note that
+most of the pytorch gradient descent optimizers are designed for
+stochastic gradient descent which is commonly used to optimize
+Neural Networks. In the case of astronomical image fitting the
+full Chi^2 can be computed at every iteration and so robustness to
+stochastic changes to the Chi^2 is not necessary in this
+case. Still, the methods like momentum which help for stochastic
+loss functions are also helpful for covariant parameters which are
+common in image fitting. When two models overlap considerably
+there is a covariance in their parameters, this can be challenging
+for a basic gradient descent optimizer but momentum helps with
+convergence. In general however, for most astronomical image
+fitting tasks it is faster to use a second order method such as
+the Levenberg-Marquardt algorithm (implimented in AutoProf as
+autoprof.fit.LM).</p>
+<p>The default method is “NAdam” which is a variant of the Adam
+algorithm. Adam performs gradient descent optimization with a
+momentum in the first and second moment of the gradient.
+Essentially momentum in the gradient and its square values. The
+NAdam method incorporate Nesterov momentum into the algorithm
+which sometimes has faster convergence properties.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – and AutoProf_Model object with which to perform optimization [AutoProf_Model object]</p></li>
+<li><p><strong>initial_state</strong> – optionally, and initial state for optimization [torch.Tensor]</p></li>
+<li><p><strong>method</strong> – optimization method to use for the update step. Any optimizer in pytorch should work [str]</p></li>
+<li><p><strong>patience</strong> – number of iterations without improvement before optimizer will exit early [int or None]</p></li>
+<li><p><strong>optim_kwargs</strong> – dictionary of key word arguments to pass to the pytorch optimizer [dict]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.gradient.Grad.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.gradient.Grad.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform an iterative fit of the model parameters using the specified optimizer</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.gradient.Grad.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.gradient.Grad.step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Take a single gradient step. Calls the model loss function,
+applies automatic differentiation to get the gradient of the
+parameters and takes a step with the pytorch optimizer.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.fit.iterative">
+<span id="autoprof-fit-iterative-module"></span><h2>autoprof.fit.iterative module<a class="headerlink" href="#module-autoprof.fit.iterative" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.fit.iterative.Iter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.fit.iterative.</span></span><span class="sig-name descname"><span class="pre">Iter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.iterative.Iter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.fit.base.BaseOptimizer" title="autoprof.fit.base.BaseOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOptimizer</span></code></a></p>
+<p>This is an optimizer wrapper which performs optimization by
+iteratively applying a different optimizer to a group model. This
+can sometimes be advantageous for fitting an extremely large
+number of models, more than can fit in memory, or for complex fits
+in which the degeneracies of parameters may overwhelm a fitting
+which acts simultaneously on all models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – and AutoProf_Model object with which to perform optimization [AutoProf_Model object]</p></li>
+<li><p><strong>method</strong> – optimizer class to apply at each iteration step [BaseOptimizer object]</p></li>
+<li><p><strong>initial_state</strong> – optionally, and initial state for optimization [torch.Tensor]</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.iterative.Iter.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.iterative.Iter.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.iterative.Iter.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.iterative.Iter.step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.iterative.Iter.sub_step">
+<span class="sig-name descname"><span class="pre">sub_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.iterative.Iter.sub_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.fit.langevin">
+<span id="autoprof-fit-langevin-module"></span><h2>autoprof.fit.langevin module<a class="headerlink" href="#module-autoprof.fit.langevin" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.fit.langevin.MALA">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.fit.langevin.</span></span><span class="sig-name descname"><span class="pre">MALA</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.langevin.MALA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.fit.base.BaseOptimizer" title="autoprof.fit.base.BaseOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOptimizer</span></code></a></p>
+<p>Metropolis Adjusted Langevin Algorithm.</p>
+<p>Borrowed heavily from Alexandre Adam: <a class="reference external" href="https://github.com/AlexandreAdam/">https://github.com/AlexandreAdam/</a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.langevin.MALA.accept">
+<span class="sig-name descname"><span class="pre">accept</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log_alpha</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.langevin.MALA.accept" title="Permalink to this definition">¶</a></dt>
+<dd><dl>
+<dt>log_alpha: The log of the acceptance ratio. In details, this</dt><dd><p>is the difference between the log probability of the proposed state x’
+and the previous state x, plus the difference between
+the transition kernel probability q in case it is asymmetrical:</p>
+<blockquote>
+<div><p>delta_alpha = log p(x’) - log p(x) + log q(x | x’) - log q(x’ | x)</p>
+</div></blockquote>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A boolean vector, whether the state is accepted or not</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.fit.langevin.MALA.acceptance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acceptance</span></span><a class="headerlink" href="#autoprof.fit.langevin.MALA.acceptance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.langevin.MALA.delta_logp">
+<span class="sig-name descname"><span class="pre">delta_logp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proposed_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.langevin.MALA.delta_logp" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Computes the log probability difference between the proposed state x’ and the current state x</dt><dd><p>log p(x’) - log p(x)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.langevin.MALA.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.langevin.MALA.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.langevin.MALA.score_fn">
+<span class="sig-name descname"><span class="pre">score_fn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.langevin.MALA.score_fn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.langevin.MALA.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.langevin.MALA.step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.fit.lm">
+<span id="autoprof-fit-lm-module"></span><h2>autoprof.fit.lm module<a class="headerlink" href="#module-autoprof.fit.lm" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.fit.lm.</span></span><span class="sig-name descname"><span class="pre">LM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.fit.base.BaseOptimizer" title="autoprof.fit.base.BaseOptimizer"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseOptimizer</span></code></a></p>
+<p>based heavily on:
+&#64;article{gavin2019levenberg,</p>
+<blockquote>
+<div><p>title={The Levenberg-Marquardt algorithm for nonlinear least squares curve-fitting problems},
+author={Gavin, Henri P},
+journal={Department of Civil and Environmental Engineering, Duke University},
+volume={19},
+year={2019}</p>
+</div></blockquote>
+<p>}</p>
+<p>The Levenberg-Marquardt algorithm bridges the gap between a
+gradient descent optimizer and a Newton’s Method optimizer. The
+Hessian for the Newton’s Method update is too complex to evaluate
+with automatic differentiation (memory scales roughly as
+parameters^2 * pixels^2) and so an approximation is made using the
+Jacobian of the image pixels wrt to the parameters of the
+model. Automatic differentiation provides an exact Jacobian as
+opposed to a finite differences approximation.</p>
+<p>Once a Hessian H and gradient G have been determined, the update
+step is defined as h which is the solution to the linear equation:</p>
+<p>(H + L*I)h = G</p>
+<p>where L is the Levenberg-Marquardt damping parameter and I is the
+identity matrix. For small L this is just the Newton’s method, for
+large L this is just a small gradient descent step (approximately
+h = grad/L). The three methods implimented come from Gavin
+2019. Note that in method 1 the identity matrix is replace with
+diag(H) so that each parameter is scaled by its second derivative.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> – and AutoProf_Model object with which to perform optimization [AutoProf_Model object]</p></li>
+<li><p><strong>initial_state</strong> – optionally, and initial state for optimization [torch.Tensor]</p></li>
+<li><p><strong>method</strong> – optimization method to use for the update step [int]</p></li>
+<li><p><strong>epsilon4</strong> – approximation accuracy requirement, for any rho &lt; epsilon4 the step will be rejected</p></li>
+<li><p><strong>epsilon5</strong> – numerical stability factor, added to the diagonal of the Hessian</p></li>
+<li><p><strong>L0</strong> – initial value for L factor in (H +L*I)h = G</p></li>
+<li><p><strong>Lup</strong> – method1 amount to increase L when rejecting an update step</p></li>
+<li><p><strong>Ldn</strong> – amount to decrease L when accetping an update step</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.L_dn">
+<span class="sig-name descname"><span class="pre">L_dn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Ldn</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.L_dn" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.L_up">
+<span class="sig-name descname"><span class="pre">L_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Lup</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.L_up" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.accept_history">
+<span class="sig-name descname"><span class="pre">accept_history</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.accept_history" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.covariance_matrix">
+<span class="sig-name descname"><span class="pre">covariance_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.covariance_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.fit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.grad_step">
+<span class="sig-name descname"><span class="pre">grad_step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.grad_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.progress_history">
+<span class="sig-name descname"><span class="pre">progress_history</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.progress_history" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.rho_1">
+<span class="sig-name descname"><span class="pre">rho_1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Xp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.rho_1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.rho_2">
+<span class="sig-name descname"><span class="pre">rho_2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Xp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.rho_2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.rho_3">
+<span class="sig-name descname"><span class="pre">rho_3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Xp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Xph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.rho_3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.step_method0">
+<span class="sig-name descname"><span class="pre">step_method0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.step_method0" title="Permalink to this definition">¶</a></dt>
+<dd><p>same as method one, except that the off diagonal elements are scaled by 1/(1+L) making the move to pure gradient descent faster and better behaved</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.step_method1">
+<span class="sig-name descname"><span class="pre">step_method1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.step_method1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.step_method2">
+<span class="sig-name descname"><span class="pre">step_method2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.step_method2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.step_method3">
+<span class="sig-name descname"><span class="pre">step_method3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.step_method3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.take_low_rho_step">
+<span class="sig-name descname"><span class="pre">take_low_rho_step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.take_low_rho_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.undo_step">
+<span class="sig-name descname"><span class="pre">undo_step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.undo_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.update_J_AD">
+<span class="sig-name descname"><span class="pre">update_J_AD</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.update_J_AD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.update_J_Broyden">
+<span class="sig-name descname"><span class="pre">update_J_Broyden</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Yp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Yph</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.update_J_Broyden" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.update_grad">
+<span class="sig-name descname"><span class="pre">update_grad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Yph</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.update_grad" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.update_h_v1">
+<span class="sig-name descname"><span class="pre">update_h_v1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.update_h_v1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.update_h_v2">
+<span class="sig-name descname"><span class="pre">update_h_v2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.update_h_v2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.update_h_v3">
+<span class="sig-name descname"><span class="pre">update_h_v3</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.update_h_v3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.fit.lm.LM.update_hess">
+<span class="sig-name descname"><span class="pre">update_hess</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.fit.lm.LM.update_hess" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.fit">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autoprof.fit" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="autoprof.image.html" class="btn btn-neutral float-right" title="autoprof.image package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="autoprof.html" class="btn btn-neutral float-left" title="autoprof package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Connor Stone.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

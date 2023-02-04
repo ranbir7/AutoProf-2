@@ -1,0 +1,61 @@
+autoprof.fit package
+====================
+
+Submodules
+----------
+
+autoprof.fit.base module
+------------------------
+
+.. automodule:: autoprof.fit.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.fit.gp module
+----------------------
+
+.. automodule:: autoprof.fit.gp
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.fit.gradient module
+----------------------------
+
+.. automodule:: autoprof.fit.gradient
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.fit.iterative module
+-----------------------------
+
+.. automodule:: autoprof.fit.iterative
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.fit.langevin module
+----------------------------
+
+.. automodule:: autoprof.fit.langevin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.fit.lm module
+----------------------
+
+.. automodule:: autoprof.fit.lm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: autoprof.fit
+   :members:
+   :undoc-members:
+   :show-inheritance:

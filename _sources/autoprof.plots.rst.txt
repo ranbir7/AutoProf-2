@@ -1,0 +1,45 @@
+autoprof.plots package
+======================
+
+Submodules
+----------
+
+autoprof.plots.image module
+---------------------------
+
+.. automodule:: autoprof.plots.image
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.plots.profile module
+-----------------------------
+
+.. automodule:: autoprof.plots.profile
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.plots.shared\_elements module
+--------------------------------------
+
+.. automodule:: autoprof.plots.shared_elements
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.plots.visuals module
+-----------------------------
+
+.. automodule:: autoprof.plots.visuals
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: autoprof.plots
+   :members:
+   :undoc-members:
+   :show-inheritance:

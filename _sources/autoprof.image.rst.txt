@@ -1,0 +1,45 @@
+autoprof.image package
+======================
+
+Submodules
+----------
+
+autoprof.image.image\_object module
+-----------------------------------
+
+.. automodule:: autoprof.image.image_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.image.model\_image module
+----------------------------------
+
+.. automodule:: autoprof.image.model_image
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.image.target\_image module
+-----------------------------------
+
+.. automodule:: autoprof.image.target_image
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.image.window\_object module
+------------------------------------
+
+.. automodule:: autoprof.image.window_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: autoprof.image
+   :members:
+   :undoc-members:
+   :show-inheritance:

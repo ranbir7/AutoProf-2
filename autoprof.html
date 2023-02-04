@@ -1,0 +1,1260 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>autoprof package &mdash; AutoProf 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autoprof.fit package" href="autoprof.fit.html" />
+    <link rel="prev" title="autoprof" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> AutoProf
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citing AutoProf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">autoprof</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">autoprof package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html">autoprof.fit package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html">autoprof.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html">autoprof.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.parse_config.html">autoprof.parse_config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.plots.html">autoprof.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.html">autoprof.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-autoprof.AP_config">autoprof.AP_config module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#autoprof.AP_config.set_logging_output"><code class="docutils literal notranslate"><span class="pre">set_logging_output()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-autoprof">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#autoprof.run_from_terminal"><code class="docutils literal notranslate"><span class="pre">run_from_terminal()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AutoProf</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">autoprof</a> &raquo;</li>
+        
+      <li>autoprof package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/autoprof.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="autoprof-package">
+<h1>autoprof package<a class="headerlink" href="#autoprof-package" title="Permalink to this heading">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.fit.html">autoprof.fit package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.fit.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.fit.html#module-autoprof.fit.base">autoprof.fit.base module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.base.BaseOptimizer"><code class="docutils literal notranslate"><span class="pre">BaseOptimizer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.base.BaseOptimizer.chi2contour"><code class="docutils literal notranslate"><span class="pre">BaseOptimizer.chi2contour()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.base.BaseOptimizer.chi2min"><code class="docutils literal notranslate"><span class="pre">BaseOptimizer.chi2min()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.base.BaseOptimizer.fit"><code class="docutils literal notranslate"><span class="pre">BaseOptimizer.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.base.BaseOptimizer.res"><code class="docutils literal notranslate"><span class="pre">BaseOptimizer.res()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.base.BaseOptimizer.step"><code class="docutils literal notranslate"><span class="pre">BaseOptimizer.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.fit.html#module-autoprof.fit.gp">autoprof.fit.gp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.fit.html#module-autoprof.fit.gradient">autoprof.fit.gradient module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.gradient.Grad"><code class="docutils literal notranslate"><span class="pre">Grad</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.gradient.Grad.fit"><code class="docutils literal notranslate"><span class="pre">Grad.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.gradient.Grad.step"><code class="docutils literal notranslate"><span class="pre">Grad.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.fit.html#module-autoprof.fit.iterative">autoprof.fit.iterative module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.iterative.Iter"><code class="docutils literal notranslate"><span class="pre">Iter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.iterative.Iter.fit"><code class="docutils literal notranslate"><span class="pre">Iter.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.iterative.Iter.step"><code class="docutils literal notranslate"><span class="pre">Iter.step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.iterative.Iter.sub_step"><code class="docutils literal notranslate"><span class="pre">Iter.sub_step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.fit.html#module-autoprof.fit.langevin">autoprof.fit.langevin module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.langevin.MALA"><code class="docutils literal notranslate"><span class="pre">MALA</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.langevin.MALA.accept"><code class="docutils literal notranslate"><span class="pre">MALA.accept()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.langevin.MALA.acceptance"><code class="docutils literal notranslate"><span class="pre">MALA.acceptance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.langevin.MALA.delta_logp"><code class="docutils literal notranslate"><span class="pre">MALA.delta_logp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.langevin.MALA.fit"><code class="docutils literal notranslate"><span class="pre">MALA.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.langevin.MALA.score_fn"><code class="docutils literal notranslate"><span class="pre">MALA.score_fn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.langevin.MALA.step"><code class="docutils literal notranslate"><span class="pre">MALA.step()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.fit.html#module-autoprof.fit.lm">autoprof.fit.lm module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM"><code class="docutils literal notranslate"><span class="pre">LM</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.L_dn"><code class="docutils literal notranslate"><span class="pre">LM.L_dn()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.L_up"><code class="docutils literal notranslate"><span class="pre">LM.L_up()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.accept_history"><code class="docutils literal notranslate"><span class="pre">LM.accept_history()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.covariance_matrix"><code class="docutils literal notranslate"><span class="pre">LM.covariance_matrix()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.fit"><code class="docutils literal notranslate"><span class="pre">LM.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.grad_step"><code class="docutils literal notranslate"><span class="pre">LM.grad_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.progress_history"><code class="docutils literal notranslate"><span class="pre">LM.progress_history()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.rho_1"><code class="docutils literal notranslate"><span class="pre">LM.rho_1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.rho_2"><code class="docutils literal notranslate"><span class="pre">LM.rho_2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.rho_3"><code class="docutils literal notranslate"><span class="pre">LM.rho_3()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.step_method0"><code class="docutils literal notranslate"><span class="pre">LM.step_method0()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.step_method1"><code class="docutils literal notranslate"><span class="pre">LM.step_method1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.step_method2"><code class="docutils literal notranslate"><span class="pre">LM.step_method2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.step_method3"><code class="docutils literal notranslate"><span class="pre">LM.step_method3()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.take_low_rho_step"><code class="docutils literal notranslate"><span class="pre">LM.take_low_rho_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.undo_step"><code class="docutils literal notranslate"><span class="pre">LM.undo_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.update_J_AD"><code class="docutils literal notranslate"><span class="pre">LM.update_J_AD()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.update_J_Broyden"><code class="docutils literal notranslate"><span class="pre">LM.update_J_Broyden()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.update_grad"><code class="docutils literal notranslate"><span class="pre">LM.update_grad()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.update_h_v1"><code class="docutils literal notranslate"><span class="pre">LM.update_h_v1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.update_h_v2"><code class="docutils literal notranslate"><span class="pre">LM.update_h_v2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.update_h_v3"><code class="docutils literal notranslate"><span class="pre">LM.update_h_v3()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html#autoprof.fit.lm.LM.update_hess"><code class="docutils literal notranslate"><span class="pre">LM.update_hess()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.fit.html#module-autoprof.fit">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.image.html">autoprof.image package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.image.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.image.html#module-autoprof.image.image_object">autoprof.image.image_object module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage"><code class="docutils literal notranslate"><span class="pre">BaseImage</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.blank_copy"><code class="docutils literal notranslate"><span class="pre">BaseImage.blank_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.center"><code class="docutils literal notranslate"><span class="pre">BaseImage.center</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.center_alignment"><code class="docutils literal notranslate"><span class="pre">BaseImage.center_alignment()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.copy"><code class="docutils literal notranslate"><span class="pre">BaseImage.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.crop"><code class="docutils literal notranslate"><span class="pre">BaseImage.crop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.data"><code class="docutils literal notranslate"><span class="pre">BaseImage.data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.flatten"><code class="docutils literal notranslate"><span class="pre">BaseImage.flatten()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.get_coordinate_meshgrid_np"><code class="docutils literal notranslate"><span class="pre">BaseImage.get_coordinate_meshgrid_np()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.get_coordinate_meshgrid_torch"><code class="docutils literal notranslate"><span class="pre">BaseImage.get_coordinate_meshgrid_torch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.get_window"><code class="docutils literal notranslate"><span class="pre">BaseImage.get_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.load"><code class="docutils literal notranslate"><span class="pre">BaseImage.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.origin"><code class="docutils literal notranslate"><span class="pre">BaseImage.origin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.pixel_center_alignment"><code class="docutils literal notranslate"><span class="pre">BaseImage.pixel_center_alignment()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.reduce"><code class="docutils literal notranslate"><span class="pre">BaseImage.reduce()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.save"><code class="docutils literal notranslate"><span class="pre">BaseImage.save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.set_data"><code class="docutils literal notranslate"><span class="pre">BaseImage.set_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.shape"><code class="docutils literal notranslate"><span class="pre">BaseImage.shape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.BaseImage.to"><code class="docutils literal notranslate"><span class="pre">BaseImage.to()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List"><code class="docutils literal notranslate"><span class="pre">Image_List</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.blank_copy"><code class="docutils literal notranslate"><span class="pre">Image_List.blank_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.copy"><code class="docutils literal notranslate"><span class="pre">Image_List.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.crop"><code class="docutils literal notranslate"><span class="pre">Image_List.crop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.data"><code class="docutils literal notranslate"><span class="pre">Image_List.data</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.flatten"><code class="docutils literal notranslate"><span class="pre">Image_List.flatten()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.get_coordinate_meshgrid_np"><code class="docutils literal notranslate"><span class="pre">Image_List.get_coordinate_meshgrid_np()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.get_coordinate_meshgrid_torch"><code class="docutils literal notranslate"><span class="pre">Image_List.get_coordinate_meshgrid_torch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.get_window"><code class="docutils literal notranslate"><span class="pre">Image_List.get_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.pixelscale"><code class="docutils literal notranslate"><span class="pre">Image_List.pixelscale</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.reduce"><code class="docutils literal notranslate"><span class="pre">Image_List.reduce()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.to"><code class="docutils literal notranslate"><span class="pre">Image_List.to()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.window"><code class="docutils literal notranslate"><span class="pre">Image_List.window</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.image_object.Image_List.zeropoint"><code class="docutils literal notranslate"><span class="pre">Image_List.zeropoint</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.image.html#module-autoprof.image.model_image">autoprof.image.model_image module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.image.html#autoprof.image.model_image.Model_Image"><code class="docutils literal notranslate"><span class="pre">Model_Image</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.model_image.Model_Image.clear_image"><code class="docutils literal notranslate"><span class="pre">Model_Image.clear_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.model_image.Model_Image.replace"><code class="docutils literal notranslate"><span class="pre">Model_Image.replace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.model_image.Model_Image.shift_origin"><code class="docutils literal notranslate"><span class="pre">Model_Image.shift_origin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.image.html#autoprof.image.model_image.Model_Image_List"><code class="docutils literal notranslate"><span class="pre">Model_Image_List</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.model_image.Model_Image_List.clear_image"><code class="docutils literal notranslate"><span class="pre">Model_Image_List.clear_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.model_image.Model_Image_List.replace"><code class="docutils literal notranslate"><span class="pre">Model_Image_List.replace()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.model_image.Model_Image_List.shift_origin"><code class="docutils literal notranslate"><span class="pre">Model_Image_List.shift_origin()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.image.html#module-autoprof.image.target_image">autoprof.image.target_image module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image"><code class="docutils literal notranslate"><span class="pre">Target_Image</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.and_mask"><code class="docutils literal notranslate"><span class="pre">Target_Image.and_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.blank_copy"><code class="docutils literal notranslate"><span class="pre">Target_Image.blank_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.copy"><code class="docutils literal notranslate"><span class="pre">Target_Image.copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.get_window"><code class="docutils literal notranslate"><span class="pre">Target_Image.get_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.has_mask"><code class="docutils literal notranslate"><span class="pre">Target_Image.has_mask</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.has_psf"><code class="docutils literal notranslate"><span class="pre">Target_Image.has_psf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.has_variance"><code class="docutils literal notranslate"><span class="pre">Target_Image.has_variance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.load"><code class="docutils literal notranslate"><span class="pre">Target_Image.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.mask"><code class="docutils literal notranslate"><span class="pre">Target_Image.mask</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.or_mask"><code class="docutils literal notranslate"><span class="pre">Target_Image.or_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.psf"><code class="docutils literal notranslate"><span class="pre">Target_Image.psf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.psf_border"><code class="docutils literal notranslate"><span class="pre">Target_Image.psf_border</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.psf_border_int"><code class="docutils literal notranslate"><span class="pre">Target_Image.psf_border_int</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.reduce"><code class="docutils literal notranslate"><span class="pre">Target_Image.reduce()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.set_mask"><code class="docutils literal notranslate"><span class="pre">Target_Image.set_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.set_psf"><code class="docutils literal notranslate"><span class="pre">Target_Image.set_psf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.set_variance"><code class="docutils literal notranslate"><span class="pre">Target_Image.set_variance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.to"><code class="docutils literal notranslate"><span class="pre">Target_Image.to()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image.variance"><code class="docutils literal notranslate"><span class="pre">Target_Image.variance</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List"><code class="docutils literal notranslate"><span class="pre">Target_Image_List</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.and_mask"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.and_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.has_mask"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.has_mask</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.has_psf"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.has_psf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.has_variance"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.has_variance</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.mask"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.mask</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.or_mask"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.or_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.psf"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.psf</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.psf_border"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.psf_border</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.psf_border_int"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.psf_border_int</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.set_mask"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.set_mask()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.set_psf"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.set_psf()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.set_variance"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.set_variance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.target_image.Target_Image_List.variance"><code class="docutils literal notranslate"><span class="pre">Target_Image_List.variance</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.image.html#module-autoprof.image.window_object">autoprof.image.window_object module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window"><code class="docutils literal notranslate"><span class="pre">Window</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.center"><code class="docutils literal notranslate"><span class="pre">Window.center</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.get_coordinate_meshgrid_np"><code class="docutils literal notranslate"><span class="pre">Window.get_coordinate_meshgrid_np()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.get_coordinate_meshgrid_torch"><code class="docutils literal notranslate"><span class="pre">Window.get_coordinate_meshgrid_torch()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.get_indices"><code class="docutils literal notranslate"><span class="pre">Window.get_indices()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.get_shape"><code class="docutils literal notranslate"><span class="pre">Window.get_shape()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.get_shape_flip"><code class="docutils literal notranslate"><span class="pre">Window.get_shape_flip()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.get_state"><code class="docutils literal notranslate"><span class="pre">Window.get_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.make_copy"><code class="docutils literal notranslate"><span class="pre">Window.make_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.overlap_frac"><code class="docutils literal notranslate"><span class="pre">Window.overlap_frac()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.plt_extent"><code class="docutils literal notranslate"><span class="pre">Window.plt_extent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.shift_origin"><code class="docutils literal notranslate"><span class="pre">Window.shift_origin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.to"><code class="docutils literal notranslate"><span class="pre">Window.to()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window.update_state"><code class="docutils literal notranslate"><span class="pre">Window.update_state()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window_List"><code class="docutils literal notranslate"><span class="pre">Window_List</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window_List.get_state"><code class="docutils literal notranslate"><span class="pre">Window_List.get_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window_List.make_copy"><code class="docutils literal notranslate"><span class="pre">Window_List.make_copy()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window_List.origin"><code class="docutils literal notranslate"><span class="pre">Window_List.origin</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window_List.shape"><code class="docutils literal notranslate"><span class="pre">Window_List.shape</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window_List.shift_origin"><code class="docutils literal notranslate"><span class="pre">Window_List.shift_origin()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window_List.to"><code class="docutils literal notranslate"><span class="pre">Window_List.to()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html#autoprof.image.window_object.Window_List.update_state"><code class="docutils literal notranslate"><span class="pre">Window_List.update_state()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.image.html#module-autoprof.image">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.models.html">autoprof.models package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.core_model">autoprof.models.core_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.List_Model_Names"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.List_Model_Names()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.List_Models"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.List_Models()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.add_equality_constraint"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.add_equality_constraint()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.compute_loss"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.compute_loss()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.constraint_strength"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.constraint_strength</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.finalize"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.finalize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.full_loss"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.full_loss()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.full_sample"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.full_sample()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.get_parameter_vector"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.get_parameter_vector()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.get_state"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.get_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.initialize"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.jacobian"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.jacobian()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.load"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.locked"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.locked</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.make_model_image"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.make_model_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.model_type"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.parameter_vector_len"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.parameter_vector_len()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.requires_grad"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.requires_grad</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.sample"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.sample()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.save"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.save()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.set_parameters"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.set_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.set_uncertainty"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.set_uncertainty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.set_window"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.set_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.target"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.target</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.useable"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.useable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.core_model.AutoProf_Model.window"><code class="docutils literal notranslate"><span class="pre">AutoProf_Model.window</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.edgeon_model">autoprof.models.edgeon_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.edgeon_model.Edgeon_Model"><code class="docutils literal notranslate"><span class="pre">Edgeon_Model</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.edgeon_model.Edgeon_Model.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Edgeon_Model.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.edgeon_model.Edgeon_Model.initialize"><code class="docutils literal notranslate"><span class="pre">Edgeon_Model.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.edgeon_model.Edgeon_Model.model_type"><code class="docutils literal notranslate"><span class="pre">Edgeon_Model.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.edgeon_model.Edgeon_Model.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Edgeon_Model.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.edgeon_model.Edgeon_Model.transform_coordinates"><code class="docutils literal notranslate"><span class="pre">Edgeon_Model.transform_coordinates()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.edgeon_model.Edgeon_Model.useable"><code class="docutils literal notranslate"><span class="pre">Edgeon_Model.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.exponential_model">autoprof.models.exponential_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Galaxy"><code class="docutils literal notranslate"><span class="pre">Exponential_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Galaxy.initialize"><code class="docutils literal notranslate"><span class="pre">Exponential_Galaxy.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">Exponential_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Exponential_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Galaxy.radial_model"><code class="docutils literal notranslate"><span class="pre">Exponential_Galaxy.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">Exponential_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Ray"><code class="docutils literal notranslate"><span class="pre">Exponential_Ray</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Ray.initialize"><code class="docutils literal notranslate"><span class="pre">Exponential_Ray.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Ray.iradial_model"><code class="docutils literal notranslate"><span class="pre">Exponential_Ray.iradial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Ray.model_type"><code class="docutils literal notranslate"><span class="pre">Exponential_Ray.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Ray.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Exponential_Ray.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Ray.useable"><code class="docutils literal notranslate"><span class="pre">Exponential_Ray.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Star"><code class="docutils literal notranslate"><span class="pre">Exponential_Star</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Star.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Exponential_Star.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Star.initialize"><code class="docutils literal notranslate"><span class="pre">Exponential_Star.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Star.model_type"><code class="docutils literal notranslate"><span class="pre">Exponential_Star.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Star.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Exponential_Star.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Star.radial_model"><code class="docutils literal notranslate"><span class="pre">Exponential_Star.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Star.useable"><code class="docutils literal notranslate"><span class="pre">Exponential_Star.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse.useable"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_SuperEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Exponential_SuperEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Warp"><code class="docutils literal notranslate"><span class="pre">Exponential_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Exponential_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Exponential_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Exponential_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Exponential_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Exponential_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Wedge"><code class="docutils literal notranslate"><span class="pre">Exponential_Wedge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Wedge.initialize"><code class="docutils literal notranslate"><span class="pre">Exponential_Wedge.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Wedge.iradial_model"><code class="docutils literal notranslate"><span class="pre">Exponential_Wedge.iradial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Wedge.model_type"><code class="docutils literal notranslate"><span class="pre">Exponential_Wedge.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Wedge.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Exponential_Wedge.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.exponential_model.Exponential_Wedge.useable"><code class="docutils literal notranslate"><span class="pre">Exponential_Wedge.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.flatsky_model">autoprof.models.flatsky_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.flatsky_model.Flat_Sky"><code class="docutils literal notranslate"><span class="pre">Flat_Sky</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.flatsky_model.Flat_Sky.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Flat_Sky.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.flatsky_model.Flat_Sky.initialize"><code class="docutils literal notranslate"><span class="pre">Flat_Sky.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.flatsky_model.Flat_Sky.model_type"><code class="docutils literal notranslate"><span class="pre">Flat_Sky.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.flatsky_model.Flat_Sky.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Flat_Sky.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.flatsky_model.Flat_Sky.useable"><code class="docutils literal notranslate"><span class="pre">Flat_Sky.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.foureirellipse_model">autoprof.models.foureirellipse_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Galaxy"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Galaxy.angular_metric"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Galaxy.angular_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Galaxy.initialize"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Galaxy.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Galaxy.radius_metric"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Galaxy.radius_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Warp.angular_metric"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Warp.angular_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Warp.radius_metric"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Warp.radius_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.foureirellipse_model.FourierEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">FourierEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.galaxy_model_object">autoprof.models.galaxy_model_object module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.galaxy_model_object.Galaxy_Model"><code class="docutils literal notranslate"><span class="pre">Galaxy_Model</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.galaxy_model_object.Galaxy_Model.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Galaxy_Model.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.galaxy_model_object.Galaxy_Model.initialize"><code class="docutils literal notranslate"><span class="pre">Galaxy_Model.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.galaxy_model_object.Galaxy_Model.model_type"><code class="docutils literal notranslate"><span class="pre">Galaxy_Model.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.galaxy_model_object.Galaxy_Model.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Galaxy_Model.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.galaxy_model_object.Galaxy_Model.radius_metric"><code class="docutils literal notranslate"><span class="pre">Galaxy_Model.radius_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.galaxy_model_object.Galaxy_Model.transform_coordinates"><code class="docutils literal notranslate"><span class="pre">Galaxy_Model.transform_coordinates()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.galaxy_model_object.Galaxy_Model.useable"><code class="docutils literal notranslate"><span class="pre">Galaxy_Model.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.gaussian_model">autoprof.models.gaussian_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse.useable"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_FourierEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Gaussian_FourierEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Galaxy"><code class="docutils literal notranslate"><span class="pre">Gaussian_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Galaxy.initialize"><code class="docutils literal notranslate"><span class="pre">Gaussian_Galaxy.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">Gaussian_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Gaussian_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Galaxy.radial_model"><code class="docutils literal notranslate"><span class="pre">Gaussian_Galaxy.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">Gaussian_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Star"><code class="docutils literal notranslate"><span class="pre">Gaussian_Star</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Star.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Gaussian_Star.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Star.initialize"><code class="docutils literal notranslate"><span class="pre">Gaussian_Star.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Star.model_type"><code class="docutils literal notranslate"><span class="pre">Gaussian_Star.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Star.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Gaussian_Star.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Star.radial_model"><code class="docutils literal notranslate"><span class="pre">Gaussian_Star.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Star.useable"><code class="docutils literal notranslate"><span class="pre">Gaussian_Star.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse.useable"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_SuperEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Gaussian_SuperEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Warp"><code class="docutils literal notranslate"><span class="pre">Gaussian_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Gaussian_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Gaussian_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Gaussian_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Gaussian_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.gaussian_model.Gaussian_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Gaussian_Warp.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.group_model_object">autoprof.models.group_model_object module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model"><code class="docutils literal notranslate"><span class="pre">Group_Model</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.add_model"><code class="docutils literal notranslate"><span class="pre">Group_Model.add_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.finalize"><code class="docutils literal notranslate"><span class="pre">Group_Model.finalize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.get_state"><code class="docutils literal notranslate"><span class="pre">Group_Model.get_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.initialize"><code class="docutils literal notranslate"><span class="pre">Group_Model.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.jacobian"><code class="docutils literal notranslate"><span class="pre">Group_Model.jacobian()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.load"><code class="docutils literal notranslate"><span class="pre">Group_Model.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.make_model_image"><code class="docutils literal notranslate"><span class="pre">Group_Model.make_model_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.model_type"><code class="docutils literal notranslate"><span class="pre">Group_Model.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.parameter_order"><code class="docutils literal notranslate"><span class="pre">Group_Model.parameter_order()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.parameter_tuples_order"><code class="docutils literal notranslate"><span class="pre">Group_Model.parameter_tuples_order()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.parameters"><code class="docutils literal notranslate"><span class="pre">Group_Model.parameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.pop_model"><code class="docutils literal notranslate"><span class="pre">Group_Model.pop_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.psf_mode"><code class="docutils literal notranslate"><span class="pre">Group_Model.psf_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.sample"><code class="docutils literal notranslate"><span class="pre">Group_Model.sample()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.sub_model_parameter_map"><code class="docutils literal notranslate"><span class="pre">Group_Model.sub_model_parameter_map()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.sync_target"><code class="docutils literal notranslate"><span class="pre">Group_Model.sync_target()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.update_window"><code class="docutils literal notranslate"><span class="pre">Group_Model.update_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.group_model_object.Group_Model.useable"><code class="docutils literal notranslate"><span class="pre">Group_Model.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.joint_model">autoprof.models.joint_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model"><code class="docutils literal notranslate"><span class="pre">Joint_Model</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.compute_loss"><code class="docutils literal notranslate"><span class="pre">Joint_Model.compute_loss()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.initialize"><code class="docutils literal notranslate"><span class="pre">Joint_Model.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.jacobian"><code class="docutils literal notranslate"><span class="pre">Joint_Model.jacobian()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.make_model_image"><code class="docutils literal notranslate"><span class="pre">Joint_Model.make_model_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.model_image_shapes"><code class="docutils literal notranslate"><span class="pre">Joint_Model.model_image_shapes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.model_image_sizes"><code class="docutils literal notranslate"><span class="pre">Joint_Model.model_image_sizes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.model_type"><code class="docutils literal notranslate"><span class="pre">Joint_Model.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.sample"><code class="docutils literal notranslate"><span class="pre">Joint_Model.sample()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.sync_target"><code class="docutils literal notranslate"><span class="pre">Joint_Model.sync_target()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.target"><code class="docutils literal notranslate"><span class="pre">Joint_Model.target</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.useable"><code class="docutils literal notranslate"><span class="pre">Joint_Model.useable</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.joint_model.Joint_Model.window"><code class="docutils literal notranslate"><span class="pre">Joint_Model.window</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.model_object">autoprof.models.model_object module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model"><code class="docutils literal notranslate"><span class="pre">Base_Model</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.build_parameter_specs"><code class="docutils literal notranslate"><span class="pre">Base_Model.build_parameter_specs()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.build_parameters"><code class="docutils literal notranslate"><span class="pre">Base_Model.build_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Base_Model.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.get_state"><code class="docutils literal notranslate"><span class="pre">Base_Model.get_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.initialize"><code class="docutils literal notranslate"><span class="pre">Base_Model.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.integrate_factor"><code class="docutils literal notranslate"><span class="pre">Base_Model.integrate_factor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.integrate_mode"><code class="docutils literal notranslate"><span class="pre">Base_Model.integrate_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.integrate_model"><code class="docutils literal notranslate"><span class="pre">Base_Model.integrate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.integrate_recursion_depth"><code class="docutils literal notranslate"><span class="pre">Base_Model.integrate_recursion_depth</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.integrate_recursion_factor"><code class="docutils literal notranslate"><span class="pre">Base_Model.integrate_recursion_factor</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.integrate_window"><code class="docutils literal notranslate"><span class="pre">Base_Model.integrate_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.integrate_window_size"><code class="docutils literal notranslate"><span class="pre">Base_Model.integrate_window_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.jacobian"><code class="docutils literal notranslate"><span class="pre">Base_Model.jacobian()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.jacobian_finite"><code class="docutils literal notranslate"><span class="pre">Base_Model.jacobian_finite()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.jacobian_mode"><code class="docutils literal notranslate"><span class="pre">Base_Model.jacobian_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.load"><code class="docutils literal notranslate"><span class="pre">Base_Model.load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.parameter_order"><code class="docutils literal notranslate"><span class="pre">Base_Model.parameter_order()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Base_Model.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.parameters"><code class="docutils literal notranslate"><span class="pre">Base_Model.parameters</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.psf_mode"><code class="docutils literal notranslate"><span class="pre">Base_Model.psf_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.psf_window_size"><code class="docutils literal notranslate"><span class="pre">Base_Model.psf_window_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.sample"><code class="docutils literal notranslate"><span class="pre">Base_Model.sample()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.special_kwargs"><code class="docutils literal notranslate"><span class="pre">Base_Model.special_kwargs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.model_object.Base_Model.useable"><code class="docutils literal notranslate"><span class="pre">Base_Model.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.moffat_model">autoprof.models.moffat_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Galaxy"><code class="docutils literal notranslate"><span class="pre">Moffat_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Galaxy.initialize"><code class="docutils literal notranslate"><span class="pre">Moffat_Galaxy.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">Moffat_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Moffat_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Galaxy.radial_model"><code class="docutils literal notranslate"><span class="pre">Moffat_Galaxy.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">Moffat_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Star"><code class="docutils literal notranslate"><span class="pre">Moffat_Star</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Star.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Moffat_Star.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Star.initialize"><code class="docutils literal notranslate"><span class="pre">Moffat_Star.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Star.model_type"><code class="docutils literal notranslate"><span class="pre">Moffat_Star.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Star.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Moffat_Star.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Star.radial_model"><code class="docutils literal notranslate"><span class="pre">Moffat_Star.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.moffat_model.Moffat_Star.useable"><code class="docutils literal notranslate"><span class="pre">Moffat_Star.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.nonparametric_model">autoprof.models.nonparametric_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse.extend_profile"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse.extend_profile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse.useable"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse_Warp.extend_profile"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse_Warp.extend_profile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_FourierEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">NonParametric_FourierEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Galaxy"><code class="docutils literal notranslate"><span class="pre">NonParametric_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Galaxy.extend_profile"><code class="docutils literal notranslate"><span class="pre">NonParametric_Galaxy.extend_profile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Galaxy.initialize"><code class="docutils literal notranslate"><span class="pre">NonParametric_Galaxy.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">NonParametric_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">NonParametric_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Galaxy.radial_model"><code class="docutils literal notranslate"><span class="pre">NonParametric_Galaxy.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">NonParametric_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Ray"><code class="docutils literal notranslate"><span class="pre">NonParametric_Ray</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Ray.extend_profile"><code class="docutils literal notranslate"><span class="pre">NonParametric_Ray.extend_profile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Ray.initialize"><code class="docutils literal notranslate"><span class="pre">NonParametric_Ray.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Ray.iradial_model"><code class="docutils literal notranslate"><span class="pre">NonParametric_Ray.iradial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Ray.model_type"><code class="docutils literal notranslate"><span class="pre">NonParametric_Ray.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Ray.parameter_specs"><code class="docutils literal notranslate"><span class="pre">NonParametric_Ray.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Ray.useable"><code class="docutils literal notranslate"><span class="pre">NonParametric_Ray.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Star"><code class="docutils literal notranslate"><span class="pre">NonParametric_Star</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Star.extend_profile"><code class="docutils literal notranslate"><span class="pre">NonParametric_Star.extend_profile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Star.initialize"><code class="docutils literal notranslate"><span class="pre">NonParametric_Star.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Star.model_type"><code class="docutils literal notranslate"><span class="pre">NonParametric_Star.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Star.parameter_specs"><code class="docutils literal notranslate"><span class="pre">NonParametric_Star.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Star.radial_model"><code class="docutils literal notranslate"><span class="pre">NonParametric_Star.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Star.useable"><code class="docutils literal notranslate"><span class="pre">NonParametric_Star.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse.extend_profile"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse.extend_profile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse.useable"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse_Warp.extend_profile"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse_Warp.extend_profile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_SuperEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">NonParametric_SuperEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Warp"><code class="docutils literal notranslate"><span class="pre">NonParametric_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Warp.extend_profile"><code class="docutils literal notranslate"><span class="pre">NonParametric_Warp.extend_profile</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">NonParametric_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">NonParametric_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">NonParametric_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">NonParametric_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nonparametric_model.NonParametric_Warp.useable"><code class="docutils literal notranslate"><span class="pre">NonParametric_Warp.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.nuker_model">autoprof.models.nuker_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse.useable"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_FourierEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Nuker_FourierEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Galaxy"><code class="docutils literal notranslate"><span class="pre">Nuker_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Galaxy.initialize"><code class="docutils literal notranslate"><span class="pre">Nuker_Galaxy.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">Nuker_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Nuker_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Galaxy.radial_model"><code class="docutils literal notranslate"><span class="pre">Nuker_Galaxy.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">Nuker_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Ray"><code class="docutils literal notranslate"><span class="pre">Nuker_Ray</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Ray.initialize"><code class="docutils literal notranslate"><span class="pre">Nuker_Ray.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Ray.iradial_model"><code class="docutils literal notranslate"><span class="pre">Nuker_Ray.iradial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Ray.model_type"><code class="docutils literal notranslate"><span class="pre">Nuker_Ray.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Ray.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Nuker_Ray.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Ray.useable"><code class="docutils literal notranslate"><span class="pre">Nuker_Ray.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Star"><code class="docutils literal notranslate"><span class="pre">Nuker_Star</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Star.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Nuker_Star.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Star.initialize"><code class="docutils literal notranslate"><span class="pre">Nuker_Star.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Star.model_type"><code class="docutils literal notranslate"><span class="pre">Nuker_Star.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Star.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Nuker_Star.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Star.radial_model"><code class="docutils literal notranslate"><span class="pre">Nuker_Star.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Star.useable"><code class="docutils literal notranslate"><span class="pre">Nuker_Star.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse.useable"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_SuperEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Nuker_SuperEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Warp"><code class="docutils literal notranslate"><span class="pre">Nuker_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Nuker_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Nuker_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Nuker_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Nuker_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.nuker_model.Nuker_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Nuker_Warp.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.parameter_object">autoprof.models.parameter_object module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter"><code class="docutils literal notranslate"><span class="pre">Parameter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.get_state"><code class="docutils literal notranslate"><span class="pre">Parameter.get_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.grad"><code class="docutils literal notranslate"><span class="pre">Parameter.grad</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.locked"><code class="docutils literal notranslate"><span class="pre">Parameter.locked</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.representation"><code class="docutils literal notranslate"><span class="pre">Parameter.representation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.requires_grad"><code class="docutils literal notranslate"><span class="pre">Parameter.requires_grad</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.set_profile"><code class="docutils literal notranslate"><span class="pre">Parameter.set_profile()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.set_representation"><code class="docutils literal notranslate"><span class="pre">Parameter.set_representation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.set_uncertainty"><code class="docutils literal notranslate"><span class="pre">Parameter.set_uncertainty()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.set_value"><code class="docutils literal notranslate"><span class="pre">Parameter.set_value()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.to"><code class="docutils literal notranslate"><span class="pre">Parameter.to()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.uncertainty"><code class="docutils literal notranslate"><span class="pre">Parameter.uncertainty</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.update_state"><code class="docutils literal notranslate"><span class="pre">Parameter.update_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.parameter_object.Parameter.value"><code class="docutils literal notranslate"><span class="pre">Parameter.value</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.planesky_model">autoprof.models.planesky_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.planesky_model.Plane_Sky"><code class="docutils literal notranslate"><span class="pre">Plane_Sky</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.planesky_model.Plane_Sky.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Plane_Sky.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.planesky_model.Plane_Sky.initialize"><code class="docutils literal notranslate"><span class="pre">Plane_Sky.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.planesky_model.Plane_Sky.model_type"><code class="docutils literal notranslate"><span class="pre">Plane_Sky.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.planesky_model.Plane_Sky.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Plane_Sky.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.planesky_model.Plane_Sky.useable"><code class="docutils literal notranslate"><span class="pre">Plane_Sky.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.psf_model">autoprof.models.psf_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.psf_model.PSF_Star"><code class="docutils literal notranslate"><span class="pre">PSF_Star</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.psf_model.PSF_Star.clip_lanczos_kernel"><code class="docutils literal notranslate"><span class="pre">PSF_Star.clip_lanczos_kernel</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.psf_model.PSF_Star.evaluate_model"><code class="docutils literal notranslate"><span class="pre">PSF_Star.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.psf_model.PSF_Star.initialize"><code class="docutils literal notranslate"><span class="pre">PSF_Star.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.psf_model.PSF_Star.lanczos_kernel_size"><code class="docutils literal notranslate"><span class="pre">PSF_Star.lanczos_kernel_size</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.psf_model.PSF_Star.model_type"><code class="docutils literal notranslate"><span class="pre">PSF_Star.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.psf_model.PSF_Star.parameter_specs"><code class="docutils literal notranslate"><span class="pre">PSF_Star.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.psf_model.PSF_Star.useable"><code class="docutils literal notranslate"><span class="pre">PSF_Star.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.ray_model">autoprof.models.ray_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.ray_model.Ray_Galaxy"><code class="docutils literal notranslate"><span class="pre">Ray_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.ray_model.Ray_Galaxy.angular_metric"><code class="docutils literal notranslate"><span class="pre">Ray_Galaxy.angular_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.ray_model.Ray_Galaxy.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Ray_Galaxy.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.ray_model.Ray_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">Ray_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.ray_model.Ray_Galaxy.polar_model"><code class="docutils literal notranslate"><span class="pre">Ray_Galaxy.polar_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.ray_model.Ray_Galaxy.special_kwargs"><code class="docutils literal notranslate"><span class="pre">Ray_Galaxy.special_kwargs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.ray_model.Ray_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">Ray_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.sersic_model">autoprof.models.sersic_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_FourierEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_FourierEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Galaxy"><code class="docutils literal notranslate"><span class="pre">Sersic_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Galaxy.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_Galaxy.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Galaxy.radial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_Galaxy.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Ray"><code class="docutils literal notranslate"><span class="pre">Sersic_Ray</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Ray.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_Ray.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Ray.iradial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_Ray.iradial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Ray.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_Ray.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Ray.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_Ray.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Ray.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_Ray.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Star"><code class="docutils literal notranslate"><span class="pre">Sersic_Star</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Star.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Sersic_Star.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Star.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_Star.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Star.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_Star.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Star.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_Star.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Star.radial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_Star.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Star.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_Star.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse.radial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_SuperEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_SuperEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Warp"><code class="docutils literal notranslate"><span class="pre">Sersic_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Warp.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_Warp.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Warp.radial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_Warp.radial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Warp.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_Warp.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Wedge"><code class="docutils literal notranslate"><span class="pre">Sersic_Wedge</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Wedge.initialize"><code class="docutils literal notranslate"><span class="pre">Sersic_Wedge.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Wedge.iradial_model"><code class="docutils literal notranslate"><span class="pre">Sersic_Wedge.iradial_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Wedge.model_type"><code class="docutils literal notranslate"><span class="pre">Sersic_Wedge.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Wedge.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sersic_Wedge.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sersic_model.Sersic_Wedge.useable"><code class="docutils literal notranslate"><span class="pre">Sersic_Wedge.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.sky_model_object">autoprof.models.sky_model_object module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.sky_model_object.Sky_Model"><code class="docutils literal notranslate"><span class="pre">Sky_Model</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sky_model_object.Sky_Model.integrate_mode"><code class="docutils literal notranslate"><span class="pre">Sky_Model.integrate_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sky_model_object.Sky_Model.model_type"><code class="docutils literal notranslate"><span class="pre">Sky_Model.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sky_model_object.Sky_Model.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Sky_Model.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sky_model_object.Sky_Model.psf_mode"><code class="docutils literal notranslate"><span class="pre">Sky_Model.psf_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.sky_model_object.Sky_Model.useable"><code class="docutils literal notranslate"><span class="pre">Sky_Model.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.star_model_object">autoprof.models.star_model_object module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.star_model_object.Star_Model"><code class="docutils literal notranslate"><span class="pre">Star_Model</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.star_model_object.Star_Model.integrate_mode"><code class="docutils literal notranslate"><span class="pre">Star_Model.integrate_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.star_model_object.Star_Model.model_type"><code class="docutils literal notranslate"><span class="pre">Star_Model.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.star_model_object.Star_Model.psf_mode"><code class="docutils literal notranslate"><span class="pre">Star_Model.psf_mode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.star_model_object.Star_Model.radius_metric"><code class="docutils literal notranslate"><span class="pre">Star_Model.radius_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.star_model_object.Star_Model.useable"><code class="docutils literal notranslate"><span class="pre">Star_Model.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.superellipse_model">autoprof.models.superellipse_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Galaxy"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Galaxy.radius_metric"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Galaxy.radius_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Warp"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Warp</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Warp.model_type"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Warp.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Warp.parameter_specs"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Warp.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Warp.radius_metric"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Warp.radius_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.superellipse_model.SuperEllipse_Warp.useable"><code class="docutils literal notranslate"><span class="pre">SuperEllipse_Warp.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.warp_model">autoprof.models.warp_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.warp_model.Warp_Galaxy"><code class="docutils literal notranslate"><span class="pre">Warp_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.warp_model.Warp_Galaxy.initialize"><code class="docutils literal notranslate"><span class="pre">Warp_Galaxy.initialize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.warp_model.Warp_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">Warp_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.warp_model.Warp_Galaxy.parameter_specs"><code class="docutils literal notranslate"><span class="pre">Warp_Galaxy.parameter_specs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.warp_model.Warp_Galaxy.transform_coordinates"><code class="docutils literal notranslate"><span class="pre">Warp_Galaxy.transform_coordinates()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.warp_model.Warp_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">Warp_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models.wedge_model">autoprof.models.wedge_model module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.models.html#autoprof.models.wedge_model.Wedge_Galaxy"><code class="docutils literal notranslate"><span class="pre">Wedge_Galaxy</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.wedge_model.Wedge_Galaxy.angular_metric"><code class="docutils literal notranslate"><span class="pre">Wedge_Galaxy.angular_metric()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.wedge_model.Wedge_Galaxy.evaluate_model"><code class="docutils literal notranslate"><span class="pre">Wedge_Galaxy.evaluate_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.wedge_model.Wedge_Galaxy.model_type"><code class="docutils literal notranslate"><span class="pre">Wedge_Galaxy.model_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.wedge_model.Wedge_Galaxy.polar_model"><code class="docutils literal notranslate"><span class="pre">Wedge_Galaxy.polar_model()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.wedge_model.Wedge_Galaxy.special_kwargs"><code class="docutils literal notranslate"><span class="pre">Wedge_Galaxy.special_kwargs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html#autoprof.models.wedge_model.Wedge_Galaxy.useable"><code class="docutils literal notranslate"><span class="pre">Wedge_Galaxy.useable</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.models.html#module-autoprof.models">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.parse_config.html">autoprof.parse_config package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.parse_config.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.parse_config.html#module-autoprof.parse_config.basic_config">autoprof.parse_config.basic_config module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.parse_config.html#autoprof.parse_config.basic_config.basic_config"><code class="docutils literal notranslate"><span class="pre">basic_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.parse_config.html#module-autoprof.parse_config.galfit_config">autoprof.parse_config.galfit_config module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.parse_config.html#autoprof.parse_config.galfit_config.galfit_config"><code class="docutils literal notranslate"><span class="pre">galfit_config()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.parse_config.html#module-autoprof.parse_config.shared_methods">autoprof.parse_config.shared_methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.parse_config.html#module-autoprof.parse_config">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.plots.html">autoprof.plots package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.plots.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.plots.html#module-autoprof.plots.image">autoprof.plots.image module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.image.model_image"><code class="docutils literal notranslate"><span class="pre">model_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.image.model_window"><code class="docutils literal notranslate"><span class="pre">model_window()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.image.residual_image"><code class="docutils literal notranslate"><span class="pre">residual_image()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.image.target_image"><code class="docutils literal notranslate"><span class="pre">target_image()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.plots.html#module-autoprof.plots.profile">autoprof.plots.profile module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.profile.galaxy_light_profile"><code class="docutils literal notranslate"><span class="pre">galaxy_light_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.profile.ray_light_profile"><code class="docutils literal notranslate"><span class="pre">ray_light_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.profile.warp_phase_profile"><code class="docutils literal notranslate"><span class="pre">warp_phase_profile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.profile.wedge_light_profile"><code class="docutils literal notranslate"><span class="pre">wedge_light_profile()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.plots.html#module-autoprof.plots.shared_elements">autoprof.plots.shared_elements module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.shared_elements.AddLogo"><code class="docutils literal notranslate"><span class="pre">AddLogo()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.shared_elements.AddScale"><code class="docutils literal notranslate"><span class="pre">AddScale()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.plots.html#autoprof.plots.shared_elements.LSBImage"><code class="docutils literal notranslate"><span class="pre">LSBImage()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.plots.html#module-autoprof.plots.visuals">autoprof.plots.visuals module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.plots.html#module-autoprof.plots">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.utils.html">autoprof.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html">autoprof.utils.conversions package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.conversions.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.coordinates">autoprof.utils.conversions.coordinates module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.dict_to_hdf5">autoprof.utils.conversions.dict_to_hdf5 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.functions">autoprof.utils.conversions.functions module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.optimization">autoprof.utils.conversions.optimization module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.units">autoprof.utils.conversions.units module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html">autoprof.utils.initialize package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.initialize.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize.center">autoprof.utils.initialize.center module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize.construct_psf">autoprof.utils.initialize.construct_psf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize.initialize">autoprof.utils.initialize.initialize module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize.segmentation_map">autoprof.utils.initialize.segmentation_map module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html">autoprof.utils.isophote package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.isophote.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.isophote.html#module-autoprof.utils.isophote.ellipse">autoprof.utils.isophote.ellipse module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.isophote.html#module-autoprof.utils.isophote.extract">autoprof.utils.isophote.extract module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.isophote.html#module-autoprof.utils.isophote.integrate">autoprof.utils.isophote.integrate module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.isophote.html#module-autoprof.utils.isophote">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.html#module-autoprof.utils.angle_operations">autoprof.utils.angle_operations module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.angle_operations.Angle_Average"><code class="docutils literal notranslate"><span class="pre">Angle_Average()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.angle_operations.Angle_Median"><code class="docutils literal notranslate"><span class="pre">Angle_Median()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.angle_operations.Angle_Scatter"><code class="docutils literal notranslate"><span class="pre">Angle_Scatter()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.angle_operations.Angle_TwoAngles_cos"><code class="docutils literal notranslate"><span class="pre">Angle_TwoAngles_cos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.angle_operations.Angle_TwoAngles_sin"><code class="docutils literal notranslate"><span class="pre">Angle_TwoAngles_sin()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.html#module-autoprof.utils.interpolate">autoprof.utils.interpolate module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.Lanczos_kernel"><code class="docutils literal notranslate"><span class="pre">Lanczos_kernel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.Lanczos_kernel_np"><code class="docutils literal notranslate"><span class="pre">Lanczos_kernel_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.arbitrary_Lanczos"><code class="docutils literal notranslate"><span class="pre">arbitrary_Lanczos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.cubic_spline_torch"><code class="docutils literal notranslate"><span class="pre">cubic_spline_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.interp1d_torch"><code class="docutils literal notranslate"><span class="pre">interp1d_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.interpolate_Lanczos"><code class="docutils literal notranslate"><span class="pre">interpolate_Lanczos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.interpolate_Lanczos_grid"><code class="docutils literal notranslate"><span class="pre">interpolate_Lanczos_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.interpolate_bicubic"><code class="docutils literal notranslate"><span class="pre">interpolate_bicubic()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.mylerp"><code class="docutils literal notranslate"><span class="pre">mylerp()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.nearest_neighbor"><code class="docutils literal notranslate"><span class="pre">nearest_neighbor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.point_Lanczos"><code class="docutils literal notranslate"><span class="pre">point_Lanczos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.shift_Lanczos_np"><code class="docutils literal notranslate"><span class="pre">shift_Lanczos_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.shift_Lanczos_torch"><code class="docutils literal notranslate"><span class="pre">shift_Lanczos_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.interpolate.window_function"><code class="docutils literal notranslate"><span class="pre">window_function()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.html#module-autoprof.utils.operations">autoprof.utils.operations module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.operations.fft_convolve_multi_torch"><code class="docutils literal notranslate"><span class="pre">fft_convolve_multi_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.operations.fft_convolve_torch"><code class="docutils literal notranslate"><span class="pre">fft_convolve_torch()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.html#module-autoprof.utils.optimization">autoprof.utils.optimization module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.optimization.chi_squared"><code class="docutils literal notranslate"><span class="pre">chi_squared()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.optimization.reduced_chi_squared"><code class="docutils literal notranslate"><span class="pre">reduced_chi_squared()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.html#module-autoprof.utils.parametric_profiles">autoprof.utils.parametric_profiles module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.exponential_np"><code class="docutils literal notranslate"><span class="pre">exponential_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.exponential_torch"><code class="docutils literal notranslate"><span class="pre">exponential_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.gaussian_np"><code class="docutils literal notranslate"><span class="pre">gaussian_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.gaussian_torch"><code class="docutils literal notranslate"><span class="pre">gaussian_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.moffat_np"><code class="docutils literal notranslate"><span class="pre">moffat_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.moffat_torch"><code class="docutils literal notranslate"><span class="pre">moffat_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.nonparametric_torch"><code class="docutils literal notranslate"><span class="pre">nonparametric_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.nuker_np"><code class="docutils literal notranslate"><span class="pre">nuker_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.nuker_torch"><code class="docutils literal notranslate"><span class="pre">nuker_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.sersic_np"><code class="docutils literal notranslate"><span class="pre">sersic_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.html#autoprof.utils.parametric_profiles.sersic_torch"><code class="docutils literal notranslate"><span class="pre">sersic_torch()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.html#module-autoprof.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-autoprof.AP_config">
+<span id="autoprof-ap-config-module"></span><h2>autoprof.AP_config module<a class="headerlink" href="#module-autoprof.AP_config" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.AP_config.set_logging_output">
+<span class="sig-prename descclassname"><span class="pre">autoprof.AP_config.</span></span><span class="sig-name descname"><span class="pre">set_logging_output</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stdout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.AP_config.set_logging_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change the logging system for AutoProf. Here you can set whether
+output prints to screen or to a logging file. This function will
+remove all handlers from the current logger in ap_logger, then add
+new handlers based on the input to the function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stdout</strong> – bollean if output should go to stdout (the console). default: True</p></li>
+<li><p><strong>filename</strong> – if given as a string, this will be the name of the file that log messages are written to. If None then no logging file will be used. default: None</p></li>
+<li><p><strong>stdout_level</strong> – the logging level of messages written to stdout, this can be different from the file level. default: logging.INFO</p></li>
+<li><p><strong>stdout_formatter</strong> – a logging.Formatter object which determines what information to include with the logging message only when printing to stdout. default: “%(message)s”</p></li>
+<li><p><strong>filename_level</strong> – the logging level of messages written to the log file, this can be different from the stdout level. default: logging.INFO</p></li>
+<li><p><strong>filename_formatter</strong> – a logging.Formatter object which determines what information to include with the logging message only when printing to the log file. default: “%(asctime)s:%(levelname)s: %(message)s”</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-autoprof">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autoprof" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.run_from_terminal">
+<span class="sig-prename descclassname"><span class="pre">autoprof.</span></span><span class="sig-name descname"><span class="pre">run_from_terminal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.run_from_terminal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="autoprof.fit.html" class="btn btn-neutral float-right" title="autoprof.fit package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-left" title="autoprof" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Connor Stone.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

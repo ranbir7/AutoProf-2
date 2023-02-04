@@ -1,0 +1,825 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>autoprof.image package &mdash; AutoProf 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autoprof.models package" href="autoprof.models.html" />
+    <link rel="prev" title="autoprof.fit package" href="autoprof.fit.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> AutoProf
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citing AutoProf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">autoprof</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="autoprof.html">autoprof package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="autoprof.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html">autoprof.fit package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">autoprof.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html">autoprof.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.parse_config.html">autoprof.parse_config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.plots.html">autoprof.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.html">autoprof.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#module-autoprof.AP_config">autoprof.AP_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#module-autoprof">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AutoProf</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">autoprof</a> &raquo;</li>
+        
+          <li><a href="autoprof.html">autoprof package</a> &raquo;</li>
+        
+      <li>autoprof.image package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/autoprof.image.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="autoprof-image-package">
+<h1>autoprof.image package<a class="headerlink" href="#autoprof-image-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-autoprof.image.image_object">
+<span id="autoprof-image-image-object-module"></span><h2>autoprof.image.image_object module<a class="headerlink" href="#module-autoprof.image.image_object" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.image.image_object.</span></span><span class="sig-name descname"><span class="pre">BaseImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixelscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zeropoint</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">note</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Core class to represent images. Any image is represented by a data
+matrix, pixelscale, and window in cooridnate space. With this
+information, an image object can undergo arithmatic with other
+image objects while preserving logical image boundaries. The image
+object can also determine coordinate locations for all of its
+pixels (get_coordinate_meshgrid).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – the matrix of pixel values for the image</p></li>
+<li><p><strong>pixelscale</strong> – the length of one side of a pixel in arcsec/pixel</p></li>
+<li><p><strong>window</strong> – an AutoProf Window object which defines the spatial cooridnates on the sky</p></li>
+<li><p><strong>filename</strong> – a filename from which to load the image.</p></li>
+<li><p><strong>zeropoint</strong> – photometric zero point for converting from pixel flux to magnitude</p></li>
+<li><p><strong>note</strong> – a note about this image if any</p></li>
+<li><p><strong>origin</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.blank_copy">
+<span class="sig-name descname"><span class="pre">blank_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.blank_copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.center">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">center</span></span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.center" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.center_alignment">
+<span class="sig-name descname"><span class="pre">center_alignment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.center_alignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if the center of the image is aligned at a pixel center
+(True) or if it is aligned at a pixel edge (False).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.crop">
+<span class="sig-name descname"><span class="pre">crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">pixels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.crop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.data">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.flatten">
+<span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.flatten" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.get_coordinate_meshgrid_np">
+<span class="sig-name descname"><span class="pre">get_coordinate_meshgrid_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.get_coordinate_meshgrid_np" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.get_coordinate_meshgrid_torch">
+<span class="sig-name descname"><span class="pre">get_coordinate_meshgrid_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.get_coordinate_meshgrid_torch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.get_window">
+<span class="sig-name descname"><span class="pre">get_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.get_window" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.origin">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">origin</span></span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.pixel_center_alignment">
+<span class="sig-name descname"><span class="pre">pixel_center_alignment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.pixel_center_alignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine the relative position of the center of a pixel with respect to the origin (mod 1)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.reduce">
+<span class="sig-name descname"><span class="pre">reduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.reduce" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation will downsample an image by the factor given. If
+scale = 2 then 2x2 blocks of pixels will be summed together to
+form individual larger pixels. A new image object will be
+returned with the appropriate pixelscale and data tensor. Note
+that the window does not change in this operation since the
+pixels are condensed, but the pixel size is increased
+correspondingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>scale</strong> – factor by which to condense the image pixels. Each scale X scale region will be summed [int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.set_data">
+<span class="sig-name descname"><span class="pre">set_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">require_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.set_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.shape">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shape</span></span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.BaseImage.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.BaseImage.to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.image.image_object.</span></span><span class="sig-name descname"><span class="pre">Image_List</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.image.image_object.BaseImage" title="autoprof.image.image_object.BaseImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseImage</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.blank_copy">
+<span class="sig-name descname"><span class="pre">blank_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.blank_copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.crop">
+<span class="sig-name descname"><span class="pre">crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">pixels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.crop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.data">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#autoprof.image.image_object.Image_List.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.flatten">
+<span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.flatten" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.get_coordinate_meshgrid_np">
+<span class="sig-name descname"><span class="pre">get_coordinate_meshgrid_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.get_coordinate_meshgrid_np" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.get_coordinate_meshgrid_torch">
+<span class="sig-name descname"><span class="pre">get_coordinate_meshgrid_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.get_coordinate_meshgrid_torch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.get_window">
+<span class="sig-name descname"><span class="pre">get_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.get_window" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.pixelscale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pixelscale</span></span><a class="headerlink" href="#autoprof.image.image_object.Image_List.pixelscale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.reduce">
+<span class="sig-name descname"><span class="pre">reduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.reduce" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation will downsample an image by the factor given. If
+scale = 2 then 2x2 blocks of pixels will be summed together to
+form individual larger pixels. A new image object will be
+returned with the appropriate pixelscale and data tensor. Note
+that the window does not change in this operation since the
+pixels are condensed, but the pixel size is increased
+correspondingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>scale</strong> – factor by which to condense the image pixels. Each scale X scale region will be summed [int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.image_object.Image_List.to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.window">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">window</span></span><a class="headerlink" href="#autoprof.image.image_object.Image_List.window" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.image_object.Image_List.zeropoint">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">zeropoint</span></span><a class="headerlink" href="#autoprof.image.image_object.Image_List.zeropoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.image.model_image">
+<span id="autoprof-image-model-image-module"></span><h2>autoprof.image.model_image module<a class="headerlink" href="#module-autoprof.image.model_image" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.image.model_image.Model_Image">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.image.model_image.</span></span><span class="sig-name descname"><span class="pre">Model_Image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixelscale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.model_image.Model_Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.image.image_object.BaseImage" title="autoprof.image.image_object.BaseImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseImage</span></code></a></p>
+<p>Image object which represents the sampling of a model at the given
+coordinates of the image. Extra arithmetic operations are
+available which can update model values in the image. The whole
+model can be shifted by less than a pixel to account for sub-pixel
+accuracy.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.model_image.Model_Image.clear_image">
+<span class="sig-name descname"><span class="pre">clear_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.model_image.Model_Image.clear_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.model_image.Model_Image.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.model_image.Model_Image.replace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.model_image.Model_Image.shift_origin">
+<span class="sig-name descname"><span class="pre">shift_origin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shift</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_prepadded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.model_image.Model_Image.shift_origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.image.model_image.Model_Image_List">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.image.model_image.</span></span><span class="sig-name descname"><span class="pre">Model_Image_List</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.model_image.Model_Image_List" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.image.image_object.Image_List" title="autoprof.image.image_object.Image_List"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image_List</span></code></a>, <a class="reference internal" href="#autoprof.image.model_image.Model_Image" title="autoprof.image.model_image.Model_Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Model_Image</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.model_image.Model_Image_List.clear_image">
+<span class="sig-name descname"><span class="pre">clear_image</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.model_image.Model_Image_List.clear_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.model_image.Model_Image_List.replace">
+<span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.model_image.Model_Image_List.replace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.model_image.Model_Image_List.shift_origin">
+<span class="sig-name descname"><span class="pre">shift_origin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shift</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.model_image.Model_Image_List.shift_origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.image.target_image">
+<span id="autoprof-image-target-image-module"></span><h2>autoprof.image.target_image module<a class="headerlink" href="#module-autoprof.image.target_image" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.image.target_image.</span></span><span class="sig-name descname"><span class="pre">Target_Image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.image.image_object.BaseImage" title="autoprof.image.image_object.BaseImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseImage</span></code></a></p>
+<p>Image object which represents the data to be fit by a model. It can
+include a variance image, mask, and PSF as anciliary data which
+describes the target image.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.and_mask">
+<span class="sig-name descname"><span class="pre">and_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.and_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.blank_copy">
+<span class="sig-name descname"><span class="pre">blank_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.blank_copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.get_window">
+<span class="sig-name descname"><span class="pre">get_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.get_window" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.has_mask">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_mask</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.has_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.has_psf">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_psf</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.has_psf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.has_variance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_variance</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.has_variance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.load" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.mask">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.or_mask">
+<span class="sig-name descname"><span class="pre">or_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.or_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.psf">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">psf</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.psf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.psf_border">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">psf_border</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.psf_border" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.psf_border_int">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">psf_border_int</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.psf_border_int" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.reduce">
+<span class="sig-name descname"><span class="pre">reduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.reduce" title="Permalink to this definition">¶</a></dt>
+<dd><p>This operation will downsample an image by the factor given. If
+scale = 2 then 2x2 blocks of pixels will be summed together to
+form individual larger pixels. A new image object will be
+returned with the appropriate pixelscale and data tensor. Note
+that the window does not change in this operation since the
+pixels are condensed, but the pixel size is increased
+correspondingly.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>scale</strong> – factor by which to condense the image pixels. Each scale X scale region will be summed [int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.set_mask">
+<span class="sig-name descname"><span class="pre">set_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.set_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.set_psf">
+<span class="sig-name descname"><span class="pre">set_psf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psf</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.set_psf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.set_variance">
+<span class="sig-name descname"><span class="pre">set_variance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.set_variance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image.variance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">variance</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image.variance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.image.target_image.</span></span><span class="sig-name descname"><span class="pre">Target_Image_List</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.image.image_object.Image_List" title="autoprof.image.image_object.Image_List"><code class="xref py py-class docutils literal notranslate"><span class="pre">Image_List</span></code></a>, <a class="reference internal" href="#autoprof.image.target_image.Target_Image" title="autoprof.image.target_image.Target_Image"><code class="xref py py-class docutils literal notranslate"><span class="pre">Target_Image</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.and_mask">
+<span class="sig-name descname"><span class="pre">and_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.and_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.has_mask">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_mask</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.has_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.has_psf">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_psf</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.has_psf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.has_variance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_variance</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.has_variance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.mask">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mask</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.or_mask">
+<span class="sig-name descname"><span class="pre">or_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.or_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.psf">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">psf</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.psf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.psf_border">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">psf_border</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.psf_border" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.psf_border_int">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">psf_border_int</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.psf_border_int" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.set_mask">
+<span class="sig-name descname"><span class="pre">set_mask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mask</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.set_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.set_psf">
+<span class="sig-name descname"><span class="pre">set_psf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.set_psf" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.set_variance">
+<span class="sig-name descname"><span class="pre">set_variance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.set_variance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.target_image.Target_Image_List.variance">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">variance</span></span><a class="headerlink" href="#autoprof.image.target_image.Target_Image_List.variance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.image.window_object">
+<span id="autoprof-image-window-object-module"></span><h2>autoprof.image.window_object module<a class="headerlink" href="#module-autoprof.image.window_object" title="Permalink to this heading">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.image.window_object.</span></span><span class="sig-name descname"><span class="pre">Window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">origin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>class to define a window on the sky in coordinate space. These
+windows can undergo arithmetic an preserve logical behavior. Image
+objects can also be indexed using windows and will return an
+appropriate subsection of their data.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.center">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">center</span></span><a class="headerlink" href="#autoprof.image.window_object.Window.center" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.get_coordinate_meshgrid_np">
+<span class="sig-name descname"><span class="pre">get_coordinate_meshgrid_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixelscale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.get_coordinate_meshgrid_np" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.get_coordinate_meshgrid_torch">
+<span class="sig-name descname"><span class="pre">get_coordinate_meshgrid_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixelscale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.get_coordinate_meshgrid_torch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.get_indices">
+<span class="sig-name descname"><span class="pre">get_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.get_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an index slicing tuple for obj corresponding to this window</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.get_shape">
+<span class="sig-name descname"><span class="pre">get_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixelscale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.get_shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.get_shape_flip">
+<span class="sig-name descname"><span class="pre">get_shape_flip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixelscale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.get_shape_flip" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.get_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.make_copy">
+<span class="sig-name descname"><span class="pre">make_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.make_copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.overlap_frac">
+<span class="sig-name descname"><span class="pre">overlap_frac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.overlap_frac" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.plt_extent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">plt_extent</span></span><a class="headerlink" href="#autoprof.image.window_object.Window.plt_extent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.shift_origin">
+<span class="sig-name descname"><span class="pre">shift_origin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shift</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.shift_origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window.update_state">
+<span class="sig-name descname"><span class="pre">update_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window.update_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window_List">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">autoprof.image.window_object.</span></span><span class="sig-name descname"><span class="pre">Window_List</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window_List" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#autoprof.image.window_object.Window" title="autoprof.image.window_object.Window"><code class="xref py py-class docutils literal notranslate"><span class="pre">Window</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window_List.get_state">
+<span class="sig-name descname"><span class="pre">get_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window_List.get_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window_List.make_copy">
+<span class="sig-name descname"><span class="pre">make_copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window_List.make_copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window_List.origin">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">origin</span></span><a class="headerlink" href="#autoprof.image.window_object.Window_List.origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window_List.shape">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">shape</span></span><a class="headerlink" href="#autoprof.image.window_object.Window_List.shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window_List.shift_origin">
+<span class="sig-name descname"><span class="pre">shift_origin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shift</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window_List.shift_origin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window_List.to">
+<span class="sig-name descname"><span class="pre">to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window_List.to" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="autoprof.image.window_object.Window_List.update_state">
+<span class="sig-name descname"><span class="pre">update_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.image.window_object.Window_List.update_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-autoprof.image">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autoprof.image" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="autoprof.models.html" class="btn btn-neutral float-right" title="autoprof.models package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="autoprof.fit.html" class="btn btn-neutral float-left" title="autoprof.fit package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Connor Stone.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>autoprof.plots package &mdash; AutoProf 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autoprof.utils package" href="autoprof.utils.html" />
+    <link rel="prev" title="autoprof.parse_config package" href="autoprof.parse_config.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> AutoProf
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citing AutoProf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">autoprof</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="autoprof.html">autoprof package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="autoprof.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html">autoprof.fit package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html">autoprof.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html">autoprof.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.parse_config.html">autoprof.parse_config package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">autoprof.plots package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.utils.html">autoprof.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#module-autoprof.AP_config">autoprof.AP_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#module-autoprof">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AutoProf</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">autoprof</a> &raquo;</li>
+        
+          <li><a href="autoprof.html">autoprof package</a> &raquo;</li>
+        
+      <li>autoprof.plots package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/autoprof.plots.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="autoprof-plots-package">
+<h1>autoprof.plots package<a class="headerlink" href="#autoprof-plots-package" title="Permalink to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-autoprof.plots.image">
+<span id="autoprof-plots-image-module"></span><h2>autoprof.plots.image module<a class="headerlink" href="#module-autoprof.plots.image" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.image.model_image">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.image.</span></span><span class="sig-name descname"><span class="pre">model_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showcbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.image.model_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.image.model_window">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.image.</span></span><span class="sig-name descname"><span class="pre">model_window</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.image.model_window" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.image.residual_image">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.image.</span></span><span class="sig-name descname"><span class="pre">residual_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sample_image</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">showcbar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center_residuals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.image.residual_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.image.target_image">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.image.</span></span><span class="sig-name descname"><span class="pre">target_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.image.target_image" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-autoprof.plots.profile">
+<span id="autoprof-plots-profile-module"></span><h2>autoprof.plots.profile module<a class="headerlink" href="#module-autoprof.plots.profile" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.profile.galaxy_light_profile">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.profile.</span></span><span class="sig-name descname"><span class="pre">galaxy_light_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'arcsec'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">R0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doassert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.profile.galaxy_light_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.profile.ray_light_profile">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.profile.</span></span><span class="sig-name descname"><span class="pre">ray_light_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'arcsec'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doassert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.profile.ray_light_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.profile.warp_phase_profile">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.profile.</span></span><span class="sig-name descname"><span class="pre">warp_phase_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'arcsec'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doassert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.profile.warp_phase_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.profile.wedge_light_profile">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.profile.</span></span><span class="sig-name descname"><span class="pre">wedge_light_profile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rad_unit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'arcsec'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend_profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">doassert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.profile.wedge_light_profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-autoprof.plots.shared_elements">
+<span id="autoprof-plots-shared-elements-module"></span><h2>autoprof.plots.shared_elements module<a class="headerlink" href="#module-autoprof.plots.shared_elements" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.shared_elements.AddLogo">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.shared_elements.</span></span><span class="sig-name descname"><span class="pre">AddLogo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0.8,</span> <span class="pre">0.01,</span> <span class="pre">0.1688,</span> <span class="pre">0.037]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">white</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.shared_elements.AddLogo" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.shared_elements.AddScale">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.shared_elements.</span></span><span class="sig-name descname"><span class="pre">AddScale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'lower</span> <span class="pre">right'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.shared_elements.AddScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>ax: figure axis object
+img_width: image width in arcseconds
+loc: location to put hte scale bar</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.plots.shared_elements.LSBImage">
+<span class="sig-prename descclassname"><span class="pre">autoprof.plots.shared_elements.</span></span><span class="sig-name descname"><span class="pre">LSBImage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.plots.shared_elements.LSBImage" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-autoprof.plots.visuals">
+<span id="autoprof-plots-visuals-module"></span><h2>autoprof.plots.visuals module<a class="headerlink" href="#module-autoprof.plots.visuals" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-autoprof.plots">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autoprof.plots" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="autoprof.utils.html" class="btn btn-neutral float-right" title="autoprof.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="autoprof.parse_config.html" class="btn btn-neutral float-left" title="autoprof.parse_config package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Connor Stone.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

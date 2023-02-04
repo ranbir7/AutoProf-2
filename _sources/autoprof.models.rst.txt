@@ -1,0 +1,197 @@
+autoprof.models package
+=======================
+
+Submodules
+----------
+
+autoprof.models.core\_model module
+----------------------------------
+
+.. automodule:: autoprof.models.core_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.edgeon\_model module
+------------------------------------
+
+.. automodule:: autoprof.models.edgeon_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.exponential\_model module
+-----------------------------------------
+
+.. automodule:: autoprof.models.exponential_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.flatsky\_model module
+-------------------------------------
+
+.. automodule:: autoprof.models.flatsky_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.foureirellipse\_model module
+--------------------------------------------
+
+.. automodule:: autoprof.models.foureirellipse_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.galaxy\_model\_object module
+--------------------------------------------
+
+.. automodule:: autoprof.models.galaxy_model_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.gaussian\_model module
+--------------------------------------
+
+.. automodule:: autoprof.models.gaussian_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.group\_model\_object module
+-------------------------------------------
+
+.. automodule:: autoprof.models.group_model_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.joint\_model module
+-----------------------------------
+
+.. automodule:: autoprof.models.joint_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.model\_object module
+------------------------------------
+
+.. automodule:: autoprof.models.model_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.moffat\_model module
+------------------------------------
+
+.. automodule:: autoprof.models.moffat_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.nonparametric\_model module
+-------------------------------------------
+
+.. automodule:: autoprof.models.nonparametric_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.nuker\_model module
+-----------------------------------
+
+.. automodule:: autoprof.models.nuker_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.parameter\_object module
+----------------------------------------
+
+.. automodule:: autoprof.models.parameter_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.planesky\_model module
+--------------------------------------
+
+.. automodule:: autoprof.models.planesky_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.psf\_model module
+---------------------------------
+
+.. automodule:: autoprof.models.psf_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.ray\_model module
+---------------------------------
+
+.. automodule:: autoprof.models.ray_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.sersic\_model module
+------------------------------------
+
+.. automodule:: autoprof.models.sersic_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.sky\_model\_object module
+-----------------------------------------
+
+.. automodule:: autoprof.models.sky_model_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.star\_model\_object module
+------------------------------------------
+
+.. automodule:: autoprof.models.star_model_object
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.superellipse\_model module
+------------------------------------------
+
+.. automodule:: autoprof.models.superellipse_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.warp\_model module
+----------------------------------
+
+.. automodule:: autoprof.models.warp_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.models.wedge\_model module
+-----------------------------------
+
+.. automodule:: autoprof.models.wedge_model
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: autoprof.models
+   :members:
+   :undoc-members:
+   :show-inheritance:

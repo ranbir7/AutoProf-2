@@ -1,0 +1,37 @@
+autoprof.utils.isophote package
+===============================
+
+Submodules
+----------
+
+autoprof.utils.isophote.ellipse module
+--------------------------------------
+
+.. automodule:: autoprof.utils.isophote.ellipse
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.isophote.extract module
+--------------------------------------
+
+.. automodule:: autoprof.utils.isophote.extract
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.isophote.integrate module
+----------------------------------------
+
+.. automodule:: autoprof.utils.isophote.integrate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: autoprof.utils.isophote
+   :members:
+   :undoc-members:
+   :show-inheritance:

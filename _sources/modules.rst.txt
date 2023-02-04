@@ -1,0 +1,7 @@
+autoprof
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   autoprof

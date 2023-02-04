@@ -1,0 +1,53 @@
+autoprof.utils.conversions package
+==================================
+
+Submodules
+----------
+
+autoprof.utils.conversions.coordinates module
+---------------------------------------------
+
+.. automodule:: autoprof.utils.conversions.coordinates
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.conversions.dict\_to\_hdf5 module
+------------------------------------------------
+
+.. automodule:: autoprof.utils.conversions.dict_to_hdf5
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.conversions.functions module
+-------------------------------------------
+
+.. automodule:: autoprof.utils.conversions.functions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.conversions.optimization module
+----------------------------------------------
+
+.. automodule:: autoprof.utils.conversions.optimization
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.conversions.units module
+---------------------------------------
+
+.. automodule:: autoprof.utils.conversions.units
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: autoprof.utils.conversions
+   :members:
+   :undoc-members:
+   :show-inheritance:

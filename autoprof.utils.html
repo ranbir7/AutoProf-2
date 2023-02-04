@@ -1,0 +1,708 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>autoprof.utils package &mdash; AutoProf 0.3.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="autoprof.utils.conversions package" href="autoprof.utils.conversions.html" />
+    <link rel="prev" title="autoprof.plots package" href="autoprof.plots.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> AutoProf
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="citation.html">Citing AutoProf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">LICENSE</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">autoprof</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="autoprof.html">autoprof package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="autoprof.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="autoprof.fit.html">autoprof.fit package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.image.html">autoprof.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.models.html">autoprof.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.parse_config.html">autoprof.parse_config package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="autoprof.plots.html">autoprof.plots package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">autoprof.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#module-autoprof.AP_config">autoprof.AP_config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.html#module-autoprof">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AutoProf</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">autoprof</a> &raquo;</li>
+        
+          <li><a href="autoprof.html">autoprof package</a> &raquo;</li>
+        
+      <li>autoprof.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/autoprof.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <section id="autoprof-utils-package">
+<h1>autoprof.utils package<a class="headerlink" href="#autoprof-utils-package" title="Permalink to this heading">¶</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.utils.conversions.html">autoprof.utils.conversions package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.conversions.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.coordinates">autoprof.utils.conversions.coordinates module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.coordinates.Axis_Ratio_Cartesian"><code class="docutils literal notranslate"><span class="pre">Axis_Ratio_Cartesian()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.coordinates.Axis_Ratio_Cartesian_np"><code class="docutils literal notranslate"><span class="pre">Axis_Ratio_Cartesian_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.coordinates.Rotate_Cartesian"><code class="docutils literal notranslate"><span class="pre">Rotate_Cartesian()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.coordinates.Rotate_Cartesian_np"><code class="docutils literal notranslate"><span class="pre">Rotate_Cartesian_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.coordinates.coord_to_index"><code class="docutils literal notranslate"><span class="pre">coord_to_index()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.coordinates.index_to_coord"><code class="docutils literal notranslate"><span class="pre">index_to_coord()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.dict_to_hdf5">autoprof.utils.conversions.dict_to_hdf5 module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.dict_to_hdf5.dict_to_hdf5"><code class="docutils literal notranslate"><span class="pre">dict_to_hdf5()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.dict_to_hdf5.hdf5_to_dict"><code class="docutils literal notranslate"><span class="pre">hdf5_to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.dict_to_hdf5.to_hdf5_has_None"><code class="docutils literal notranslate"><span class="pre">to_hdf5_has_None()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.functions">autoprof.utils.conversions.functions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_I0_to_flux_np"><code class="docutils literal notranslate"><span class="pre">sersic_I0_to_flux_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_I0_to_flux_torch"><code class="docutils literal notranslate"><span class="pre">sersic_I0_to_flux_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_Ie_to_flux_np"><code class="docutils literal notranslate"><span class="pre">sersic_Ie_to_flux_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_Ie_to_flux_torch"><code class="docutils literal notranslate"><span class="pre">sersic_Ie_to_flux_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_flux_to_I0_np"><code class="docutils literal notranslate"><span class="pre">sersic_flux_to_I0_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_flux_to_I0_torch"><code class="docutils literal notranslate"><span class="pre">sersic_flux_to_I0_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_flux_to_Ie_np"><code class="docutils literal notranslate"><span class="pre">sersic_flux_to_Ie_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_flux_to_Ie_torch"><code class="docutils literal notranslate"><span class="pre">sersic_flux_to_Ie_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_inv_np"><code class="docutils literal notranslate"><span class="pre">sersic_inv_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_inv_torch"><code class="docutils literal notranslate"><span class="pre">sersic_inv_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.functions.sersic_n_to_b"><code class="docutils literal notranslate"><span class="pre">sersic_n_to_b()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.optimization">autoprof.utils.conversions.optimization module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.optimization.boundaries"><code class="docutils literal notranslate"><span class="pre">boundaries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.optimization.cyclic_boundaries"><code class="docutils literal notranslate"><span class="pre">cyclic_boundaries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.optimization.cyclic_difference_np"><code class="docutils literal notranslate"><span class="pre">cyclic_difference_np()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.optimization.cyclic_difference_torch"><code class="docutils literal notranslate"><span class="pre">cyclic_difference_torch()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.optimization.d_boundaries_dval"><code class="docutils literal notranslate"><span class="pre">d_boundaries_dval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.optimization.d_inv_boundaries_dval"><code class="docutils literal notranslate"><span class="pre">d_inv_boundaries_dval()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.optimization.inv_boundaries"><code class="docutils literal notranslate"><span class="pre">inv_boundaries()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions.units">autoprof.utils.conversions.units module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.units.PA_shift_convention"><code class="docutils literal notranslate"><span class="pre">PA_shift_convention()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.units.flux_to_mag"><code class="docutils literal notranslate"><span class="pre">flux_to_mag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.units.flux_to_sb"><code class="docutils literal notranslate"><span class="pre">flux_to_sb()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.units.mag_to_flux"><code class="docutils literal notranslate"><span class="pre">mag_to_flux()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.units.mag_to_magperarcsec2"><code class="docutils literal notranslate"><span class="pre">mag_to_magperarcsec2()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.units.magperarcsec2_to_mag"><code class="docutils literal notranslate"><span class="pre">magperarcsec2_to_mag()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.conversions.html#autoprof.utils.conversions.units.sb_to_flux"><code class="docutils literal notranslate"><span class="pre">sb_to_flux()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.conversions.html#module-autoprof.utils.conversions">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.utils.initialize.html">autoprof.utils.initialize package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.initialize.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize.center">autoprof.utils.initialize.center module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.center.GaussianDensity_Peak"><code class="docutils literal notranslate"><span class="pre">GaussianDensity_Peak()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.center.Lanczos_peak"><code class="docutils literal notranslate"><span class="pre">Lanczos_peak()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.center.center_of_mass"><code class="docutils literal notranslate"><span class="pre">center_of_mass()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize.construct_psf">autoprof.utils.initialize.construct_psf module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.construct_psf.construct_psf"><code class="docutils literal notranslate"><span class="pre">construct_psf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.construct_psf.gaussian_psf"><code class="docutils literal notranslate"><span class="pre">gaussian_psf()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize.initialize">autoprof.utils.initialize.initialize module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.initialize.isophotes"><code class="docutils literal notranslate"><span class="pre">isophotes()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize.segmentation_map">autoprof.utils.initialize.segmentation_map module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.segmentation_map.filter_windows"><code class="docutils literal notranslate"><span class="pre">filter_windows()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.segmentation_map.scale_windows"><code class="docutils literal notranslate"><span class="pre">scale_windows()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.initialize.html#autoprof.utils.initialize.segmentation_map.windows_from_segmentation_map"><code class="docutils literal notranslate"><span class="pre">windows_from_segmentation_map()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.initialize.html#module-autoprof.utils.initialize">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autoprof.utils.isophote.html">autoprof.utils.isophote package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.isophote.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.isophote.html#module-autoprof.utils.isophote.ellipse">autoprof.utils.isophote.ellipse module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.ellipse.Rscale_Fmodes"><code class="docutils literal notranslate"><span class="pre">Rscale_Fmodes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.ellipse.Rscale_SuperEllipse"><code class="docutils literal notranslate"><span class="pre">Rscale_SuperEllipse()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.ellipse.parametric_Fmodes"><code class="docutils literal notranslate"><span class="pre">parametric_Fmodes()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.ellipse.parametric_SuperEllipse"><code class="docutils literal notranslate"><span class="pre">parametric_SuperEllipse()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.isophote.html#module-autoprof.utils.isophote.extract">autoprof.utils.isophote.extract module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.extract.Sigma_Clip_Upper"><code class="docutils literal notranslate"><span class="pre">Sigma_Clip_Upper()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.isophote.html#module-autoprof.utils.isophote.integrate">autoprof.utils.isophote.integrate module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.integrate.Fmode_Areas"><code class="docutils literal notranslate"><span class="pre">Fmode_Areas()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.integrate.Fmode_fluxdens_to_fluxsum"><code class="docutils literal notranslate"><span class="pre">Fmode_fluxdens_to_fluxsum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.integrate.Fmode_fluxdens_to_fluxsum_errorprop"><code class="docutils literal notranslate"><span class="pre">Fmode_fluxdens_to_fluxsum_errorprop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.integrate.fluxdens_to_fluxsum"><code class="docutils literal notranslate"><span class="pre">fluxdens_to_fluxsum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="autoprof.utils.isophote.html#autoprof.utils.isophote.integrate.fluxdens_to_fluxsum_errorprop"><code class="docutils literal notranslate"><span class="pre">fluxdens_to_fluxsum_errorprop()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="autoprof.utils.isophote.html#module-autoprof.utils.isophote">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading">¶</a></h2>
+</section>
+<section id="module-autoprof.utils.angle_operations">
+<span id="autoprof-utils-angle-operations-module"></span><h2>autoprof.utils.angle_operations module<a class="headerlink" href="#module-autoprof.utils.angle_operations" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.angle_operations.Angle_Average">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.angle_operations.</span></span><span class="sig-name descname"><span class="pre">Angle_Average</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.angle_operations.Angle_Average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the average for a list of angles, which may wrap around a cyclic boundary.</p>
+<p>a: list of angles in the range [0,2pi]</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.angle_operations.Angle_Median">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.angle_operations.</span></span><span class="sig-name descname"><span class="pre">Angle_Median</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.angle_operations.Angle_Median" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the median for a list of angles, which may wrap around a cyclic boundary.</p>
+<p>a: list of angles in the range [0,2pi]</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.angle_operations.Angle_Scatter">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.angle_operations.</span></span><span class="sig-name descname"><span class="pre">Angle_Scatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.angle_operations.Angle_Scatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the scatter for a list of angles, which may wrap around a cyclic boundary.</p>
+<p>a: list of angles in the range [0,2pi]</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.angle_operations.Angle_TwoAngles_cos">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.angle_operations.</span></span><span class="sig-name descname"><span class="pre">Angle_TwoAngles_cos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.angle_operations.Angle_TwoAngles_cos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the angle between two vectors at angles a1 and a2</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.angle_operations.Angle_TwoAngles_sin">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.angle_operations.</span></span><span class="sig-name descname"><span class="pre">Angle_TwoAngles_sin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.angle_operations.Angle_TwoAngles_sin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the angle between two vectors at angles a1 and a2</p>
+</dd></dl>
+
+</section>
+<section id="module-autoprof.utils.interpolate">
+<span id="autoprof-utils-interpolate-module"></span><h2>autoprof.utils.interpolate module<a class="headerlink" href="#module-autoprof.utils.interpolate" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.Lanczos_kernel">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">Lanczos_kernel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.Lanczos_kernel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Kernel function for Lanczos interpolation, defines the
+interpolation behavior between pixels.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.Lanczos_kernel_np">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">Lanczos_kernel_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.Lanczos_kernel_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>convolution kernel for shifting all pixels in a grid by some
+sub-pixel length.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.arbitrary_Lanczos">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">arbitrary_Lanczos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">I</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.arbitrary_Lanczos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply Lanczos interpolation for a list of coordinates with
+unspecified structure.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.cubic_spline_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">cubic_spline_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'const'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.cubic_spline_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>1d Cubic spline function implimented for pytorch</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.interp1d_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">interp1d_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.interp1d_torch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.interpolate_Lanczos">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">interpolate_Lanczos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.interpolate_Lanczos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform Lanczos interpolation on an image at a series of specified points.
+<a class="reference external" href="https://pixinsight.com/doc/docs/InterpolationAlgorithms/InterpolationAlgorithms.html">https://pixinsight.com/doc/docs/InterpolationAlgorithms/InterpolationAlgorithms.html</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.interpolate_Lanczos_grid">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">interpolate_Lanczos_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.interpolate_Lanczos_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform Lanczos interpolation at a grid of points.
+<a class="reference external" href="https://pixinsight.com/doc/docs/InterpolationAlgorithms/InterpolationAlgorithms.html">https://pixinsight.com/doc/docs/InterpolationAlgorithms/InterpolationAlgorithms.html</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.interpolate_bicubic">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">interpolate_bicubic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.interpolate_bicubic" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper for scipy bivariate spline interpolation</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.mylerp">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">mylerp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weight</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.mylerp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.nearest_neighbor">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">nearest_neighbor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.nearest_neighbor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpolation using the nearest pixel value.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.point_Lanczos">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">point_Lanczos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">I</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.point_Lanczos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply Lanczos interpolation to evaluate a single point.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.shift_Lanczos_np">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">shift_Lanczos_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">I</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.shift_Lanczos_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply Lanczos interpolation to shift by less than a pixel in x and
+y.</p>
+<p>I: the image
+dx: amount by which the grid will be moved in the x-axis (the “data” is fixed and the grid moves). Should be a value from (-0.5,0.5)
+dy: amount by which the grid will be moved in the y-axis (the “data” is fixed and the grid moves). Should be a value from (-0.5,0.5)
+scale: dictates size of the Lanczos kernel. Full kernel size is 2*scale+1</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.shift_Lanczos_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">shift_Lanczos_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">I</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_prepadded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.shift_Lanczos_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply Lanczos interpolation to shift by less than a pixel in x and
+y.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.interpolate.window_function">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.interpolate.</span></span><span class="sig-name descname"><span class="pre">window_function</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">X</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.interpolate.window_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-autoprof.utils.operations">
+<span id="autoprof-utils-operations-module"></span><h2>autoprof.utils.operations module<a class="headerlink" href="#module-autoprof.utils.operations" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.operations.fft_convolve_multi_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.operations.</span></span><span class="sig-name descname"><span class="pre">fft_convolve_multi_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernels</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kernel_fft</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_prepadded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.operations.fft_convolve_multi_torch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.operations.fft_convolve_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.operations.</span></span><span class="sig-name descname"><span class="pre">fft_convolve_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psf_fft</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">img_prepadded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.operations.fft_convolve_torch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-autoprof.utils.optimization">
+<span id="autoprof-utils-optimization-module"></span><h2>autoprof.utils.optimization module<a class="headerlink" href="#module-autoprof.utils.optimization" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.optimization.chi_squared">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.optimization.</span></span><span class="sig-name descname"><span class="pre">chi_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.optimization.chi_squared" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.optimization.reduced_chi_squared">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.optimization.</span></span><span class="sig-name descname"><span class="pre">reduced_chi_squared</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.optimization.reduced_chi_squared" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-autoprof.utils.parametric_profiles">
+<span id="autoprof-utils-parametric-profiles-module"></span><h2>autoprof.utils.parametric_profiles module<a class="headerlink" href="#module-autoprof.utils.parametric_profiles" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.exponential_np">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">exponential_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ie</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Re</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.exponential_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exponential 1d profile function, works more generally with numpy
+operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii array at which to evaluate the sersic function</p></li>
+<li><p><strong>Re</strong> – Effective radius in the same units as R</p></li>
+<li><p><strong>Ie</strong> – Effective surface density</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.exponential_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">exponential_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Re</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ie</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.exponential_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exponential 1d profile function, specifically designed for pytorch
+operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii tensor at which to evaluate the sersic function</p></li>
+<li><p><strong>Re</strong> – Effective radius in the same units as R</p></li>
+<li><p><strong>Ie</strong> – Effective surface density</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.gaussian_np">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">gaussian_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.gaussian_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gaussian 1d profile function, works more generally with numpy
+operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii array at which to evaluate the sersic function</p></li>
+<li><p><strong>sigma</strong> – standard deviation of the gaussian in the same units as R</p></li>
+<li><p><strong>I0</strong> – central surface density</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.gaussian_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">gaussian_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.gaussian_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gaussian 1d profile function, specifically designed for pytorch
+operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii tensor at which to evaluate the sersic function</p></li>
+<li><p><strong>sigma</strong> – standard deviation of the gaussian in the same units as R</p></li>
+<li><p><strong>I0</strong> – central surface density</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.moffat_np">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">moffat_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.moffat_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moffat 1d profile function, works with numpy operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii tensor at which to evaluate the moffat function</p></li>
+<li><p><strong>n</strong> – concentration index</p></li>
+<li><p><strong>Rd</strong> – scale length in the same units as R</p></li>
+<li><p><strong>I0</strong> – central surface density</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.moffat_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">moffat_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">I0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.moffat_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moffat 1d profile function, specifically designed for pytorch
+operations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii tensor at which to evaluate the moffat function</p></li>
+<li><p><strong>n</strong> – concentration index</p></li>
+<li><p><strong>Rd</strong> – scale length in the same units as R</p></li>
+<li><p><strong>I0</strong> – central surface density</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.nonparametric_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">nonparametric_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profI</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixelscale2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.nonparametric_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nonparametric 1d profile function, cubic spline between points up
+to second last point beyond which is linear, specifically designed
+for pytorch.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii tensor at which to evaluate the sersic function</p></li>
+<li><p><strong>profR</strong> – radius values for the surface density profile in the same units as R</p></li>
+<li><p><strong>profI</strong> – surface density values for the surface density profile</p></li>
+<li><p><strong>pixelscale2</strong> – squared pixelscale. Just use 1 if not needed</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.nuker_np">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">nuker_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.nuker_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nuker 1d profile function, works with numpy functions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii tensor at which to evaluate the nuker function</p></li>
+<li><p><strong>Ib</strong> – brightness at the scale length, represented as the log of the brightness divided by pixel scale squared.</p></li>
+<li><p><strong>Rb</strong> – scale length radius</p></li>
+<li><p><strong>alpha</strong> – sharpness of transition between power law slopes</p></li>
+<li><p><strong>beta</strong> – outer power law slope</p></li>
+<li><p><strong>gamma</strong> – inner power law slope</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.nuker_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">nuker_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Rb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ib</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.nuker_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Nuker 1d profile function, specifically designed for pytorch
+operations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii tensor at which to evaluate the nuker function</p></li>
+<li><p><strong>Ib</strong> – brightness at the scale length, represented as the log of the brightness divided by pixel scale squared.</p></li>
+<li><p><strong>Rb</strong> – scale length radius</p></li>
+<li><p><strong>alpha</strong> – sharpness of transition between power law slopes</p></li>
+<li><p><strong>beta</strong> – outer power law slope</p></li>
+<li><p><strong>gamma</strong> – inner power law slope</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.sersic_np">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">sersic_np</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Re</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ie</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.sersic_np" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sersic 1d profile function, works more generally with numpy
+operations. In the event that impossible values are passed to the
+function it returns large values to guide optimizers away from
+such values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii array at which to evaluate the sersic function</p></li>
+<li><p><strong>n</strong> – sersic index restricted to n &gt; 0.36</p></li>
+<li><p><strong>Re</strong> – Effective radius in the same units as R</p></li>
+<li><p><strong>Ie</strong> – Effective surface density</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoprof.utils.parametric_profiles.sersic_torch">
+<span class="sig-prename descclassname"><span class="pre">autoprof.utils.parametric_profiles.</span></span><span class="sig-name descname"><span class="pre">sersic_torch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">R</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Re</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ie</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoprof.utils.parametric_profiles.sersic_torch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Seric 1d profile function, specifically designed for pytorch
+operations</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R</strong> – Radii tensor at which to evaluate the sersic function</p></li>
+<li><p><strong>n</strong> – sersic index restricted to n &gt; 0.36</p></li>
+<li><p><strong>Re</strong> – Effective radius in the same units as R</p></li>
+<li><p><strong>Ie</strong> – Effective surface density</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-autoprof.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-autoprof.utils" title="Permalink to this heading">¶</a></h2>
+</section>
+</section>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="autoprof.utils.conversions.html" class="btn btn-neutral float-right" title="autoprof.utils.conversions package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="autoprof.plots.html" class="btn btn-neutral float-left" title="autoprof.plots package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2023, Connor Stone.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

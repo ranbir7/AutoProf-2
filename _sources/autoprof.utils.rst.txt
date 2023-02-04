@@ -1,0 +1,63 @@
+autoprof.utils package
+======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   autoprof.utils.conversions
+   autoprof.utils.initialize
+   autoprof.utils.isophote
+
+Submodules
+----------
+
+autoprof.utils.angle\_operations module
+---------------------------------------
+
+.. automodule:: autoprof.utils.angle_operations
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.interpolate module
+---------------------------------
+
+.. automodule:: autoprof.utils.interpolate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.operations module
+--------------------------------
+
+.. automodule:: autoprof.utils.operations
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.optimization module
+----------------------------------
+
+.. automodule:: autoprof.utils.optimization
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+autoprof.utils.parametric\_profiles module
+------------------------------------------
+
+.. automodule:: autoprof.utils.parametric_profiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: autoprof.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
